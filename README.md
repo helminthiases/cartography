@@ -6,7 +6,16 @@
 
 ### Notes
 
-Focuses on project maps, and map derived estimates.
+The foci herein are project maps, and map derived estimates.  For site level estimates &rarr;
+
+* Read-in the Administration Level 2 shapes
+* Extract the co&ouml;rdinates per administration area
+* Create a raster map of a feature via administration area co&ouml;rdinates & administration area feature values
+* Extract site level values from the raster.
+
+<br>
+
+References of interest:
 
 * [ESPEN Cartography Database](https://espen.afro.who.int/tools-resources/cartography-database)
 * [Spatial Data](https://www.diva-gis.org)
