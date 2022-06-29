@@ -26,7 +26,8 @@ SewerPipes <- function (file) {
   temporary <- function (year) {
 
     # missing
-    # map data
+    # map data of the correct year
+    # map <- SewerPipesFeatures(... year)
 
     # experiments data
     frame <- country[country$year == year, ]
