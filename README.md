@@ -59,6 +59,19 @@ Temporary:  Examples of WASH maps &rarr;
 <br>
 <br>
 
+### Try / Switch
+
+Switch to ``parallel::`` later.
+
+```R
+clusters <- parallel::makeCluster(parallel::detectCores())
+parallel::parLapply(clusters, ..., ...)
+parallel::stopCluster(c1 = clusters)
+```
+
+<br>
+<br>
+
 ### Independent Development Environment
 
 * Edit the help file skeletons in 'man', possibly combining help files
