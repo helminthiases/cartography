@@ -5,7 +5,7 @@
 
 
 # functions
-source(file = '../features/SewerPipesFeature.R')
+source(file = 'R/features/SewerPipesFeature.R')
 
 
 #' in progress
@@ -25,7 +25,11 @@ SewerPipes <- function (file) {
 
   temporary <- function (year) {
 
-    frame <- country[country$year == 2017, ]
+    # missing
+    # map data
+
+    # experiments data
+    frame <- country[country$year == year, ]
 
     # The longitude & latitude points
     # dplyr::rename(points, 'lon' = 'longitude', 'lat' = 'latitude')
