@@ -1,11 +1,11 @@
-# Title     : SewerPipes.R
+# Title     : SewerPipesFeature.R
 # Objective : Sewer pipes
 # Created by: greyhypotheses
 # Created on: 29/06/2022
 
 
 # functions
-source(file = 'R/features/SewerPipes.R')
+source(file = '../features/SewerPipesFeature.R')
 
 
 #' in progress
