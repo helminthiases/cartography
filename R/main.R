@@ -12,15 +12,26 @@ source(file = 'R/features/SewerPipes.R')
 hub <- dirname(getwd())
 source <- file.path(hub, 'infections', 'warehouse', 'data', 'ESPEN', 'experiments', 'equivalent')
 files <- base::list.files(path = source, pattern = '.csv')
-files <- matrix(data = files)
 
+
+# A SpatRaster
+map <- SewerPipes()
 
 # A temporary extracion function
 temporary <- function (file) {
-  frame <- read.csv(file = file.path(source, file))
-  points <- frame %>%
-    select(longitude, latitude)
 
+  # An experiments data set
+  frame <- read.csv(file = file.path(source, file))
+
+  # It longitude & latitude points
+  points <- frame %>%
+    dplyr::select(longitude, latitude)
+  dplyr::rename(points, 'lon' = 'longitude', 'lat' = 'latitude')
+
+  # Variable values w.r.t. ...
+  derivations <- terra::extract(x = map, y = points, method = 'simple')
+
+  print(derivations)
 
 }
 lapply(X = files, FUN = temporary)
