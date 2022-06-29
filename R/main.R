@@ -24,16 +24,30 @@ temporary <- function (file) {
   frame <- read.csv(file = file.path(source, file))
 
   # It longitude & latitude points
+  # dplyr::rename(points, 'lon' = 'longitude', 'lat' = 'latitude')
   points <- frame %>%
     dplyr::select(longitude, latitude)
-  dplyr::rename(points, 'lon' = 'longitude', 'lat' = 'latitude')
 
   # Variable values w.r.t. ...
-  derivations <- terra::extract(x = map, y = points, method = 'simple')
+  derivations <- terra::extract(x = map, y = points, method = 'bilinear')
   derivations <- derivations %>% dplyr::select(!ID)
   names(derivations) <- 'estimate'
-  
-  print(head(derivations))
+  sum(!is.na(derivations))
+
+
+  # Alternatively
+  country <- st_as_sf(frame, coords = c('longitude', 'latitude'))
+  sf::st_crs(country) <- 'EPSG:4326'
+  country <- st_transform(country, crs = 'EPSG:3587')
+  sf::st_crs(country)
+
+  reference <- terra::project(map, paste0('EPSG:', 3587), method = 'bilinear')
+  cat(terra::crs(reference))
+
+  derivations <- terra::extract(reference, terra::vect(country), method = 'bilinear')
+  derivations <- derivations %>% dplyr::select(!ID)
+  names(derivations) <- 'estimate'
+  sum(!is.na(derivations))
 
 }
 lapply(X = files, FUN = temporary)
