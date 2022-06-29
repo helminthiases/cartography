@@ -4,6 +4,13 @@
 # Created on: 29/06/2022
 
 
+# functions
+source(file = 'R/features/SewerPipes.R')
+
+
+#' in progress
+#'
+#'
 SewerPipes <- function (file) {
 
   # List the unique data years
@@ -30,6 +37,6 @@ SewerPipes <- function (file) {
     names(derivations) <- c('id', 'estimate')
 
   }
-
+  lapply(X = years, FUN = temporary)
 
 }
