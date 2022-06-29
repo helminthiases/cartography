@@ -15,13 +15,20 @@ The foci herein are project maps, and map derived estimates.  For site level est
 * Create a raster map of a feature via administration area co&ouml;rdinates & administration area feature values
 * Extract site level values from the raster.
 
-<br>
-
 **Or, just**
 
 * Create a raster map of a feature via geospatial feature values.
 * Extract site level values from the raster.
 
+<br>
+
+Administrative Areas:
+
+* [Global Administrative Areas (GADM)](https://gadm.org)
+* [Global Colaboration Engine](http://globe.umbc.edu)
+* [GADM & GLOBE](http://globe.umbc.edu/documentation-overview/global-administrative-areas-gadm/)
+* The co&ouml;rdinate reference system details of a GADM map are visible at the bottom of 
+  [a country page](https://gadm.org/download_country.html), after selecting a country.  It is ``EPSG:4326``.
 
 <br>
 
@@ -36,7 +43,7 @@ References of interest:
 * [National Oceanic & Atmospheric Administration (NOAA)](https://www.ncdc.noaa.gov/cdo-web/datasets)
 * [WorldClim](https://www.worldclim.org/data/index.html)
 
-<br>
+
 <br>
 
 Temporary:  Examples of WASH maps &rarr;
