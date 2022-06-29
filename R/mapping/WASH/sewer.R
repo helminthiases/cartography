@@ -37,20 +37,18 @@ tm_shape(map, raster.downsample = TRUE) +
   tm_raster(title = 'Sewers')
 
 
+# A country; the CRS of GADM maps is EPSG:4326 [https://gadm.org/download_country.html]
+boundaries <- geodata::gadm(country = 'Tanzania', level = 0, resolution = 1, path = tempdir(), version = '4.0')
+class(boundaries)
+cat(terra::crs(boundaries))
+
+terra::crs(boundaries) <- 'EPSG:4326'
+class(boundaries)
+cat(terra::crs(boundaries))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Intersection of geometries
+terra::mask(map, boundaries) %>%
+  tm_shape(raster.downsample = FALSE) +
+  tm_layout(main.title = 'Tanzania', frame = FALSE) +
+  tm_raster(title = 'Piped Sewer')
