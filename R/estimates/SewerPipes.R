@@ -15,7 +15,7 @@ SewerPipes <- function (file) {
 
   # List the unique data years
   # Per year, extract the sewer pipes estimates from the appropriate <sewer pipes map>
-  # Issue: The map years do not span all the data years
+  # Issue: The map years - from 2000 until 2017 - do not span all the data years
 
 
   # An experiments data set
@@ -23,11 +23,16 @@ SewerPipes <- function (file) {
   years <- unique(country$year)
 
 
+  # In progress: Valid years
+  # years in [2000  2017]
+
+
+  # Hence
   temporary <- function (year) {
 
     # missing
     # map data of the correct year
-    # map <- SewerPipesFeatures(... year)
+    map <- SewerPipesFeature(year = year)
 
     # experiments data
     frame <- country[country$year == year, ]
