@@ -30,8 +30,10 @@ temporary <- function (file) {
 
   # Variable values w.r.t. ...
   derivations <- terra::extract(x = map, y = points, method = 'simple')
-
-  print(derivations)
+  derivations <- derivations %>% dplyr::select(!ID)
+  names(derivations) <- 'estimate'
+  
+  print(head(derivations))
 
 }
 lapply(X = files, FUN = temporary)
