@@ -33,10 +33,11 @@ cat(terra::crs(map))
 
 # Illustrate
 tm_shape(map, raster.downsample = TRUE) +
-  tm_layout(main.title = 'World', frame = FALSE) +
+  tm_layout(title = 'LMIC', frame = FALSE, legend.position = c('right', 'bottom'), inner.margins = 0.1) +
   tm_raster(title = 'Sewers')
 
 
+# A country
 boundaries <- geodata::gadm(country = 'Tanzania', level = 2, resolution = 1, path = tempdir(), version = '4.0')
 
 
