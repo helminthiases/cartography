@@ -42,6 +42,7 @@ References of interest:
 * [IHME WASH](https://www.healthdata.org/research-article/mapping-geographic-inequalities-access-drinking-water-and-sanitation-facilities-low)
 * [National Oceanic & Atmospheric Administration (NOAA)](https://www.ncdc.noaa.gov/cdo-web/datasets)
 * [WorldClim](https://www.worldclim.org/data/index.html)
+* [Map projections](https://www.usgs.gov/publications/map-projections)
 
 
 <br>
