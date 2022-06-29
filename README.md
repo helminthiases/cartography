@@ -39,6 +39,19 @@ References of interest:
 <br>
 <br>
 
+Temporary:  Examples of WASH maps &rarr;
+
+* [IHME_LMIC_WASH_2000_2017_S_PIPED_PERCENT_LOWER_2000_Y2020M06D02.TIF](https://cloud.ihme.washington.edu/s/bkH2X2tFQMejMxy/download?path=%2FS_PIPED%20-%20Access%20to%20sewer%20and%20septic%20sanitation%20facilities%20%5BGeoTIFF%5D%2FPercent&files=IHME_LMIC_WASH_2000_2017_S_PIPED_PERCENT_LOWER_2000_Y2020M06D02.TIF)
+
+* [IHME_LMIC_WASH_2000_2017_S_PIPED_PERCENT_LOWER_2001_Y2020M06D02.TIF](https://cloud.ihme.washington.edu/s/bkH2X2tFQMejMxy/download?path=%2FS_PIPED%20-%20Access%20to%20sewer%20and%20septic%20sanitation%20facilities%20%5BGeoTIFF%5D%2FPercent&files=IHME_LMIC_WASH_2000_2017_S_PIPED_PERCENT_LOWER_2001_Y2020M06D02.TIF)
+
+* [IHME_LMIC_WASH_2000_2017_S_PIPED_PERCENT_UPPER_2016_Y2020M06D02.TIF](https://cloud.ihme.washington.edu/s/bkH2X2tFQMejMxy/download?path=%2FS_PIPED%20-%20Access%20to%20sewer%20and%20septic%20sanitation%20facilities%20%5BGeoTIFF%5D%2FPercent&files=IHME_LMIC_WASH_2000_2017_S_PIPED_PERCENT_UPPER_2016_Y2020M06D02.TIF)
+
+* [IHME_LMIC_WASH_2000_2017_S_PIPED_PERCENT_UPPER_2017_Y2020M06D02.TIF](https://cloud.ihme.washington.edu/s/bkH2X2tFQMejMxy/download?path=%2FS_PIPED%20-%20Access%20to%20sewer%20and%20septic%20sanitation%20facilities%20%5BGeoTIFF%5D%2FPercent&files=IHME_LMIC_WASH_2000_2017_S_PIPED_PERCENT_UPPER_2017_Y2020M06D02.TIF)
+
+<br>
+<br>
+
 ### Independent Development Environment
 
 * Edit the help file skeletons in 'man', possibly combining help files
