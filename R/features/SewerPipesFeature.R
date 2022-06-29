@@ -6,16 +6,20 @@
 
 source(file = 'R/functions/Unlink.R')
 
+#' Sewer Pipes Feature
 #'
-#' Add a path parameter later
+#' @description Unloads the LMIC (lower & middle income countries) sewer pipes map from
+#'              IHME (institute for health metrics & evaluation )
 #'
-SewerPipes <- function () {
+#' @param year: The sewer pipes year of interest
+#'
+SewerPipesFeature <- function (year) {
 
 
   # A source example
-  url <- 'https://cloud.ihme.washington.edu/s/bkH2X2tFQMejMxy/download?path=%2FS_PIPED%20-%20Access%20to%20sewer%20and%20septic%20sanitation%20facilities%20%5BGeoTIFF%5D%2FPercent&files='
+  url <- paste0('https://cloud.ihme.washington.edu/s/bkH2X2tFQMejMxy/download?',
+                'path=%2FS_PIPED%20-%20Access%20to%20sewer%20and%20septic%20sanitation%20facilities%20%5BGeoTIFF%5D%2FPercent&files=')
   item <- 'IHME_LMIC_WASH_2000_2017_S_PIPED_PERCENT_UPPER_'
-  year <- 2017
   date <- '_Y2020M06D02.TIF'
 
 
