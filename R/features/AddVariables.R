@@ -26,11 +26,14 @@ AddVariables <- function (experiment, mapstring, variable, affix) {
   case <- function(year, experiment, mapstring, variable, affix) {
 
     # map path
-    path <- file.path(mapstring, year, affix)
+    path <- paste0(mapstring, year, affix)
 
     # the feature values at a coordiate point
     derivations <- PointMapping(experiment, path, year)
-    names(derivations) <- c('id', variable)
+    names(derivations) <- variable
+    derivations$year <- year
+
+    print(class(derivations))
 
     return(derivations)
   }
@@ -38,8 +41,6 @@ AddVariables <- function (experiment, mapstring, variable, affix) {
   estimates <- mapply(FUN = case,
                       year = years,
                       MoreArgs = list(experiment = experiment, mapstring = mapstring, variable = variable, affix = affix))
-
-  estimates <- dplyr::bind_rows(estimates)
 
   return(estimates)
 
