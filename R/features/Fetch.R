@@ -13,7 +13,7 @@ source(file = 'R/functions/Unlink.R')
 #'
 #' @param year: The sewer pipes year of interest
 #'
-SewerPipesFeature <- function (path, item, year, affix) {
+Fetch <- function (path, item, year, affix) {
 
   # Read the map data
   # class(map)
