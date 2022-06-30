@@ -1,7 +1,8 @@
 # Title     : Unlink.R
-# Objective : Unlinking,deleting, objects.
+# Objective : Unlinking, deleting, objects.
 # Created by: greyhypotheses
 # Created on: 29/06/2022
+
 
 UnlinkDirectories <- function (path) {
 
@@ -10,6 +11,7 @@ UnlinkDirectories <- function (path) {
   }
 
 }
+
 
 UnlinkFiles <- function (path) {
 
