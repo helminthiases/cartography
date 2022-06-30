@@ -19,8 +19,8 @@ SewerPipes <- function (file) {
 
 
   # An experiments data set
-  country <- read.csv(file = file)
-  years <- unique(country$year)
+  dataset <- read.csv(file = file)
+  years <- unique(dataset$year)
 
 
   # In progress: Valid years
@@ -28,29 +28,8 @@ SewerPipes <- function (file) {
 
 
   # Hence
-  temporary <- function (year) {
-
-    # missing
-    # map data of the correct year
-    map <- SewerPipesFeature(year = year)
-
-    # experiments data
-    frame <- country[country$year == year, ]
-
-    # The longitude & latitude points
-    # dplyr::rename(points, 'lon' = 'longitude', 'lat' = 'latitude')
-    points <- frame %>%
-      dplyr::select(longitude, latitude)
-
-    # Variable values w.r.t. ...
-    derivations <- terra::extract(x = map, y = points, method = 'bilinear')
-    row.names(derivations) <- row.names(frame[derivations$ID, ])
-    derivations <- derivations %>% dplyr::select(!ID)
-    names(derivations) <- 'estimate'
-
-    return(derivations)
-
-  }
+  # Enhance w.r.t. ...
+  
   estimates <- lapply(X = years, FUN = temporary)
   estimates <- dplyr::bind_rows(estimates)
 
