@@ -35,9 +35,10 @@ SewerPipesFeature <- function (year) {
 
 
   # Read the map data
+  # class(map)
+  # cat(terra::crs(map))
   map <- terra::rast(file.path(getwd(), 'data', 'shapes', 'WASH', 'sewer', paste0(item, year, date)))
-  class(map)
-  cat(terra::crs(map))
+
 
   return(map)
 
