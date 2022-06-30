@@ -19,6 +19,7 @@ items <- c('IHME_LMIC_WASH_2000_2017_S_IMP_PERCENT_MEAN_', 'IHME_LMIC_WASH_2000_
            'IHME_LMIC_WASH_2000_2017_S_OD_PERCENT_MEAN_', 'IHME_LMIC_WASH_2000_2017_S_PIPED_PERCENT_MEAN_',
            'IHME_LMIC_WASH_2000_2017_S_UNIMP_PERCENT_MEAN_')
 variables <- c('improved', 'unpiped', 'surface', 'piped', 'unimproved')
+affix <- '_Y2020M06D02.TIF'
 
 
 # test
