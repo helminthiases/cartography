@@ -31,11 +31,13 @@ AddVariables <- function (experiment, mapstring, variable, affix) {
     # the feature values at a coordiate point
     derivations <- PointMapping(experiment, path, year)
     names(derivations) <- variable
-    derivations$year <- year
+
+    # year?
+    # derivations$year <- year
 
     print(class(derivations))
 
-    return(derivations)
+    return(list(derivations))
   }
 
   estimates <- mapply(FUN = case,
