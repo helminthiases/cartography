@@ -24,7 +24,7 @@ SewerPipes <- function (file) {
 
 
   # In progress: Valid years
-  # years in [2000  2017]
+  years <- years[years %in% seq(from = 2000, to = 2017)]
 
 
   # Hence
@@ -44,9 +44,14 @@ SewerPipes <- function (file) {
 
     # Variable values w.r.t. ...
     derivations <- terra::extract(x = map, y = points, method = 'bilinear')
-    names(derivations) <- c('id', 'estimate')
+    row.names(derivations) <- row.names(frame[derivations$ID, ])
+    derivations <- derivations %>% dplyr::select(!ID)
+    names(derivations) <- 'estimate'
+
+    return(derivations)
 
   }
-  lapply(X = years, FUN = temporary)
+  estimates <- lapply(X = years, FUN = temporary)
+  estimates <- dplyr::bind_rows(estimates)
 
 }
