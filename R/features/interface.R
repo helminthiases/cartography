@@ -29,6 +29,7 @@ item <- items[1]
 variable <- variables[1]
 mapstring <- file.path(root, variable, item)
 X <- AddVariables(experiment = experiment, mapstring = mapstring, variable = variable, affix = affix)
-
+Y <- dplyr::bind_rows(X)
+Z <- merge(x = experiment, y = Y, by = 0)
 
 
