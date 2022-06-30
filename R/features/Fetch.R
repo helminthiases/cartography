@@ -6,22 +6,19 @@
 
 source(file = 'R/functions/Unlink.R')
 
-#' Sewer Pipes Feature
+#' Fetches the map of a feature
 #'
-#' @description Unloads the LMIC (lower & middle income countries) sewer pipes map from
-#'              IHME (institute for health metrics & evaluation )
+#' @description Uploads a LMIC (lower & middle income countries) WASH map
 #'
-#' @param year: The sewer pipes year of interest
+#' @param path: The location of a map file
 #'
-Fetch <- function (path, item, year, affix) {
+Fetch <- function (path) {
 
   # Read the map data
   # class(map)
   # cat(terra::crs(map))
-  map <- terra::rast(file.path(path, paste0(item, year, affix)))
-
+  map <- terra::rast(file.path(path))
 
   return(map)
-
 
 }
