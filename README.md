@@ -90,6 +90,12 @@ length(x = unique(records$ADM0_CODE))
 ```
 
 <br>
+
+```R
+root <- glue::glue('{endpoint}path={path}&files')
+```
+
+<br>
 <br>
 
 ### Independent Development Environment
