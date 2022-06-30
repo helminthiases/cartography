@@ -1,5 +1,5 @@
-# Title     : Fetch.R
-# Objective : Sewer pipes
+# Title     : FetchMap.R
+# Objective : Fetch map
 # Created by: greyhypotheses
 # Created on: 29/06/2022
 
@@ -12,7 +12,7 @@ source(file = 'R/functions/Unlink.R')
 #'
 #' @param path: The location of a map file
 #'
-Fetch <- function (path) {
+FetchMap <- function (path) {
 
   # Read the map data
   # class(map)
