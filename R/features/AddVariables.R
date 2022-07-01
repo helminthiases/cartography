@@ -32,17 +32,23 @@ AddVariables <- function (experiment, mapstring, variable, affix) {
     derivations <- PointMapping(experiment, path, year)
     names(derivations) <- variable
 
-    # year?
+    # year
     # derivations$year <- year
-
-    print(class(derivations))
 
     return(list(derivations))
   }
 
+
+  # structuring
   estimates <- mapply(FUN = case,
                       year = years,
                       MoreArgs = list(experiment = experiment, mapstring = mapstring, variable = variable, affix = affix))
+  estimates <- dplyr::bind_rows(estimates)
+
+
+  # ensure the row identifiers are in order
+  estimates <- estimates[order(as.numeric(row.names(estimates))), 1, drop = FALSE]
+
 
   return(estimates)
 
