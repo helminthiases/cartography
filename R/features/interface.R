@@ -25,11 +25,12 @@ affix <- '_Y2020M06D02.TIF'
 # test
 file <- files[1]
 experiment <- read.csv(file = file)
-item <- items[1]
-variable <- variables[1]
-mapstring <- file.path(root, variable, item)
-X <- AddVariables(experiment = experiment, mapstring = mapstring, variable = variable, affix = affix)
-Y <- dplyr::bind_rows(X)
-Z <- merge(x = experiment, y = Y, by = 0)
 
+X <- AddVariables(experiment = experiment, mapstring = file.path(root, variables[1], items[1]),
+                  variable = variables[1], affix = affix)
+Y <- AddVariables(experiment = experiment, mapstring = file.path(root, variables[2], items[2]),
+                  variable = variables[2], affix = affix)
+Z <- AddVariables(experiment = experiment, mapstring = file.path(root, variables[3], items[3]),
+                  variable = variables[3], affix = affix)
 
+dplyr::bind_cols(list(X, Y, Z))
