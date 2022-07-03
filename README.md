@@ -6,6 +6,8 @@
 
 Remember, each observation of an ESPEN STH experiments data set - the data set of a country across years - includes the variables
 
+<br>
+
 variable | description
 :--- | :---
 iso2 | The ISO 3166-1 alpha-2 country code, i.e., the two-letter country code.
@@ -15,22 +17,24 @@ admin2_id | A country's administrative division 2 code.
 longitude | The longitude geographic co&ouml;rdinate value.
 latitude | The latitude geographic co&ouml;rdinate value.
 
+<br>
+
 and much more.  Due to the presence of the latitude & longitude values, we can extract feature value estimates from 
 geospatial variable objects.
 
 Hence, the focus herein is the derivation of features estimates of interest, per location within a STH ESPEN data set.  Initially, 
 the features of interest are WASH (water, sanitation, and hygiene) features. 
 
+<br>
+<br>
 
 ### References
 
-<br>
 
 #### WASH
 
 * [IHME WASH](https://www.healthdata.org/research-article/mapping-geographic-inequalities-access-drinking-water-and-sanitation-facilities-low)
 
-<br>
 
 #### Administrative Areas
 
@@ -38,7 +42,6 @@ the features of interest are WASH (water, sanitation, and hygiene) features.
 * The co&ouml;rdinate reference system details of a GADM map are visible at the bottom of 
   [a country page](https://gadm.org/download_country.html), after selecting a country.  It is ``EPSG:4326``.
 
-<br>
 
 #### ESPEN
 
@@ -47,7 +50,6 @@ the features of interest are WASH (water, sanitation, and hygiene) features.
   * [ESPEN API](https://admin.espen.afro.who.int/docs/api)
   * [ESPEN API Documentation](https://espen.stoplight.io)
   
-<br>
 
 #### Miscellaneous Features
 
