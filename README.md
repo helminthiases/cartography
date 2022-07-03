@@ -1,115 +1,64 @@
 <br>
 
-**Cartography**
-
-Repository Branches: master & develop
+## Geospatial Variables
 
 <br>
 
-### Notes
+Remember, each observation of an ESPEN STH experiments data set - the data set of a country across years - includes the variables
 
-The foci herein are project maps, and map derived estimates.  For site level estimates &rarr;
+variable | description
+:--- | :---
+iso2 | The ISO 3166-1 alpha-2 country code, i.e., the two-letter country code.
+iso3 | The ISO 3166-1 alpha-3 country code, i.e., the three-letter country code.
+admin1_id | A country's administrative division 1 code.
+admin2_id | A country's administrative division 2 code.
+longitude | The longitude geographic co&ouml;rdinate value.
+latitude | The latitude geographic co&ouml;rdinate value.
 
-* Read-in the Administration Level 2 shapes.
-* Extract the co&ouml;rdinates per administration area
-* Create a raster map of a feature via administration area co&ouml;rdinates & administration area feature values
-* Extract site level values from the raster.
+and much more.  Due to the presence of the latitude & longitude values, we can extract feature value estimates from 
+geospatial variable objects.
 
-**Or, just**
+Hence, the focus herein is the derivation of features estimates of interest, per location within a STH ESPEN data set.  Initially, 
+the features of interest are WASH (water, sanitation, and hygiene) features. 
 
-* Create a raster map of a feature via geospatial feature values.
-* Extract site level values from the raster.
+
+### References
 
 <br>
 
-Administrative Areas:
+#### WASH
+
+* [IHME WASH](https://www.healthdata.org/research-article/mapping-geographic-inequalities-access-drinking-water-and-sanitation-facilities-low)
+
+<br>
+
+#### Administrative Areas
 
 * [Global Administrative Areas (GADM)](https://gadm.org)
-* [Global Colaboration Engine](http://globe.umbc.edu)
-* [GADM & GLOBE](http://globe.umbc.edu/documentation-overview/global-administrative-areas-gadm/)
 * The co&ouml;rdinate reference system details of a GADM map are visible at the bottom of 
   [a country page](https://gadm.org/download_country.html), after selecting a country.  It is ``EPSG:4326``.
 
 <br>
 
-References of interest:
+#### ESPEN
 
 * [ESPEN](https://espen.afro.who.int/)
   * [ESPEN Cartography Database](https://espen.afro.who.int/tools-resources/cartography-database)
   * [ESPEN API](https://admin.espen.afro.who.int/docs/api)
   * [ESPEN API Documentation](https://espen.stoplight.io)
+  
+<br>
+
+#### Miscellaneous Features
+
+* [features available via ``r geodata``](https://github.com/rspatial/geodata#data)
+* [Global Colaboration Engine](http://globe.umbc.edu)
+  * [GADM & GLOBE](http://globe.umbc.edu/documentation-overview/global-administrative-areas-gadm/)
+  * [Variable Explorer](http://globe.umbc.edu/app/#/analysis/global-variables)
 * [Spatial Data](https://www.diva-gis.org)
-* [IHME WASH](https://www.healthdata.org/research-article/mapping-geographic-inequalities-access-drinking-water-and-sanitation-facilities-low)
 * [National Oceanic & Atmospheric Administration (NOAA)](https://www.ncdc.noaa.gov/cdo-web/datasets)
 * [WorldClim](https://www.worldclim.org/data/index.html)
 * [Map projections](https://www.usgs.gov/publications/map-projections)
-
-
-<br>
-
-Temporary:  Examples of WASH maps &rarr;
-
-* [IHME_LMIC_WASH_2000_2017_S_PIPED_PERCENT_LOWER_2000_Y2020M06D02.TIF](https://cloud.ihme.washington.edu/s/bkH2X2tFQMejMxy/download?path=%2FS_PIPED%20-%20Access%20to%20sewer%20and%20septic%20sanitation%20facilities%20%5BGeoTIFF%5D%2FPercent&files=IHME_LMIC_WASH_2000_2017_S_PIPED_PERCENT_LOWER_2000_Y2020M06D02.TIF)
-
-* [IHME_LMIC_WASH_2000_2017_S_PIPED_PERCENT_LOWER_2001_Y2020M06D02.TIF](https://cloud.ihme.washington.edu/s/bkH2X2tFQMejMxy/download?path=%2FS_PIPED%20-%20Access%20to%20sewer%20and%20septic%20sanitation%20facilities%20%5BGeoTIFF%5D%2FPercent&files=IHME_LMIC_WASH_2000_2017_S_PIPED_PERCENT_LOWER_2001_Y2020M06D02.TIF)
-
-* [IHME_LMIC_WASH_2000_2017_S_PIPED_PERCENT_UPPER_2016_Y2020M06D02.TIF](https://cloud.ihme.washington.edu/s/bkH2X2tFQMejMxy/download?path=%2FS_PIPED%20-%20Access%20to%20sewer%20and%20septic%20sanitation%20facilities%20%5BGeoTIFF%5D%2FPercent&files=IHME_LMIC_WASH_2000_2017_S_PIPED_PERCENT_UPPER_2016_Y2020M06D02.TIF)
-
-* [IHME_LMIC_WASH_2000_2017_S_PIPED_PERCENT_UPPER_2017_Y2020M06D02.TIF](https://cloud.ihme.washington.edu/s/bkH2X2tFQMejMxy/download?path=%2FS_PIPED%20-%20Access%20to%20sewer%20and%20septic%20sanitation%20facilities%20%5BGeoTIFF%5D%2FPercent&files=IHME_LMIC_WASH_2000_2017_S_PIPED_PERCENT_UPPER_2017_Y2020M06D02.TIF)
-
-<br>
-<br>
-
-### Try / Switch
-
-Switch to ``parallel::`` later.
-
-```R
-clusters <- parallel::makeCluster(parallel::detectCores())
-parallel::parLapply(clusters, ..., ...)
-parallel::stopCluster(c1 = clusters)
-```
-
-<br>
-<br>
-
-### Snippets
-
-```R
-# IHME LMIC WASH Estimates 2000 - 2017 Administration Level 2 Piped Sanitation Y2020M06D02
-# Access to sewer and septic sanitation facilities [GeoTIFF]
-uri <- 'data/points/IHME_LMIC_WASH_2000_2017_S_PIPED_ADMIN_2_Y2020M06D02.csv'
-url <- paste0('https://cloud.ihme.washington.edu/s/bkH2X2tFQMejMxy?path=%2FData%20%5BCSV%5D%2FAdmin%202&',
-              'files=IHME_LMIC_WASH_2000_2017_S_PIPED_ADMIN_2_Y2020M06D02.zip')
-
-records <- data.table::fread(file = uri, strip.white = TRUE)
-str(records)
-
-# The number of unique countries
-length(x = unique(records$ADM0_CODE))
-```
-
-<br>
-
-```R
-root <- glue::glue('{endpoint}path={path}&files')
-```
-
-<br>
-<br>
-
-### Independent Development Environment
-
-* Edit the help file skeletons in 'man', possibly combining help files
-  for multiple functions.
-* Edit the exports in 'NAMESPACE', and add necessary imports.
-* Put any C/C++/Fortran code in 'src'.
-* If you have compiled code, add a useDynLib() directive to
-  'NAMESPACE'.
-* Run R CMD build to build the package tarball.
-* Run R CMD check to check the package tarball.
-
-Read "Writing R Extensions" for more information.
 
 <br>
 <br>
