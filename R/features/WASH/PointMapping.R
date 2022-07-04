@@ -17,14 +17,16 @@ PointMapping <- function (experiment, path, year) {
   frame <- experiment[experiment$year == year, ]
 
   # The longitude & latitude points
-  # dplyr::rename(points, 'lon' = 'longitude', 'lat' = 'latitude')
-  points <- frame %>%
-    dplyr::select(longitude, latitude)
+  # points <- frame %>% dplyr::select(longitude, latitude)
+  points <- frame[, c('longitude', 'latitude')]
 
   # Variable values w.r.t. ...
   derivations <- terra::extract(x = map, y = points, method = 'bilinear')
   row.names(derivations) <- row.names(frame[derivations$ID, ])
-  derivations <- derivations %>% dplyr::select(!ID)
+
+  # Exclude ID
+  # derivations <- derivations %>% dplyr::select(!ID)
+  derivations <- base::subset(x = derivations, select = -ID)
   names(derivations) <- 'estimate'
 
   return(derivations)
