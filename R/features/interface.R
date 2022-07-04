@@ -30,15 +30,18 @@ variables <- c('improved', 'unpiped', 'surface', 'piped', 'unimproved',
 affix <- '_Y2020M06D02.TIF'
 
 
-# test
-case <- function (variable, item, type, file, root, affix) {
-  experiment <- read.csv(file = file)
+# test, subsequently proceed in parallel w.r.t. files
+experiment <- read.csv(file = files[1])
+case <- function (variable, item, type, experiment, root, affix) {
   estimates <- AddVariables(experiment = experiment, mapstring = file.path(root, type, variable, item),
                             name = paste0(variable, '_', type), affix = affix)
   return(list(estimates))
 }
-E <- mapply(FUN = case, variable = variables,
+factors <- mapply(FUN = case, variable = variables,
             item = items,
             type = types,
-            MoreArgs = list(file = files[1], root = root, affix = affix))
-dplyr::bind_cols(E)
+            MoreArgs = list(experiment = experiment, root = root, affix = affix))
+factors <- dplyr::bind_cols(factors)
+frame <- base::merge(x = experiment, y = factors, by = 0, all.x = TRUE)
+
+
