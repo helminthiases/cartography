@@ -4,7 +4,7 @@
 # Created on: 29/06/2022
 
 
-source(file = 'R/functions/Unlink.R')
+source(file = '../../functions/Unlink.R')
 
 #' Fetches the map of a feature
 #'
