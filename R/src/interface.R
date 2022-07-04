@@ -4,15 +4,12 @@
 # Created on: 30/06/2022
 
 
-
 source(file = 'R/src/Unload.R')
-
 
 
 # The end point & affix of the cloud data
 endpoint <- 'https://cloud.ihme.washington.edu/s/bkH2X2tFQMejMxy/download?'
 affix <- '_Y2020M06D02.TIF'
-
 
 
 # Unload steps
@@ -23,7 +20,6 @@ case <- function (path, item, variable, segment) {
 
   return(TRUE)
 }
-
 
 
 # The sewer data of interest
@@ -38,7 +34,6 @@ items <- c('IHME_LMIC_WASH_2000_2017_S_IMP_PERCENT_MEAN_', 'IHME_LMIC_WASH_2000_
 variables <- c('improved', 'unpiped', 'surface', 'piped', 'unimproved')
 
 X <- mapply(FUN = case, variable = variables, path = paths, item = items, MoreArgs = list(segment = 'sewer'))
-
 
 
 # The water data of interest
