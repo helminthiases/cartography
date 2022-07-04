@@ -4,7 +4,5 @@
 # Created on: 29/06/2022
 
 
-# list of experiments
-hub <- dirname(getwd())
-source <- file.path(hub, 'infections', 'warehouse', 'data', 'ESPEN', 'experiments', 'equivalent')
-files <- base::list.files(path = source, pattern = '.csv', full.names = TRUE)
+# R/src/interface.R
+# R/features/interface.R
