@@ -13,10 +13,11 @@
 #' @param types: A sewer or water variable?
 #' @param source: The directory within which the sewer & water data directories are located.
 #' @param affix: The terminating string of each file.  An IHME peculiarity.
+#' @param storage: The storage directory
 #'
-Hygiene <- function (file, variables, items, types, source, affix) {
+Hygiene <- function (file, variables, items, types, source, affix, storage) {
 
-  
+
   experiment <- read.csv(file = file)
 
 
@@ -35,6 +36,14 @@ Hygiene <- function (file, variables, items, types, source, affix) {
 
 
   frame <- base::merge(x = experiment, y = factors, by = 0, all.x = TRUE)
+  
 
+  utils::write.table(x = frame,
+                     file = file.path(storage, base::basename(path = file)),
+                     append = FALSE,
+                     sep = ',',
+                     row.names = FALSE,
+                     col.names = TRUE,
+                     fileEncoding = 'UTF-8')
 
 }
