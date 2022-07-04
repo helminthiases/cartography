@@ -46,4 +46,6 @@ Hygiene <- function (file, variables, items, types, source, affix, storage) {
                      col.names = TRUE,
                      fileEncoding = 'UTF-8')
 
+  cat(base::basename(path = file))
+
 }
