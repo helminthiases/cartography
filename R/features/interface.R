@@ -8,7 +8,7 @@ rm(list = ls())
 
 
 # custom functions
-source(file = 'R/features/Hygiene.R')
+source(file = 'WASH/Hygiene.R')
 
 
 # the list of experiment files
