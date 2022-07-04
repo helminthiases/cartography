@@ -4,5 +4,8 @@
 # Created on: 29/06/2022
 
 
-# R/src/interface.R
-# R/features/interface.R
+# Unload IHME WASH maps
+source(file = 'R/src/interface.R')
+
+# Add IHME WASH featuures to each STH experiments data file
+source(file = 'R/features/WASH/interface.R')
