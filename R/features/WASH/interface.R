@@ -13,12 +13,12 @@ source(file = 'R/features/WASH/Hygiene.R')
 
 # the list of experiment files
 files <- list.files(path = file.path(dirname(getwd()),
-                                     'infections', 'warehouse', '../../../data', 'ESPEN', 'networks', 'graphs'),
+                                     'infections', 'warehouse', 'data', 'ESPEN', 'networks', 'graphs'),
                     full.names = TRUE)
 
 
 # arguments
-source <- file.path(getwd(), '../../../data', 'WASH')
+repo <- file.path(getwd(), 'data', 'WASH')
 types <- c(rep('sewer', times = 5), rep('water', times = 5))
 items <- c('IHME_LMIC_WASH_2000_2017_S_IMP_PERCENT_MEAN_', 'IHME_LMIC_WASH_2000_2017_S_IMP_OTHER_PERCENT_MEAN_',
            'IHME_LMIC_WASH_2000_2017_S_OD_PERCENT_MEAN_', 'IHME_LMIC_WASH_2000_2017_S_PIPED_PERCENT_MEAN_',
@@ -44,7 +44,7 @@ doParallel::registerDoParallel(cores = cores)
 clusters <- parallel::makeCluster(cores)
 parallel::clusterMap(clusters, fun = Hygiene, files,
                      MoreArgs = list(variables = variables, items = items, types = types, 
-                                     source = source, affix = affix, storage = storage))
+                                     repo = repo, affix = affix, storage = storage))
 parallel::stopCluster(clusters)
 rm(clusters, cores)
 
