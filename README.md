@@ -23,7 +23,8 @@ and much more.  Due to the presence of the latitude & longitude values, we can e
 geospatial variable objects.
 
 Hence, the focus herein is the derivation of features estimates of interest, per location within a STH ESPEN data set.  Initially, 
-the features of interest are WASH (water, sanitation, and hygiene) features. 
+the features of interest are WASH (water, sanitation, and hygiene) features; for a preview, 
+explore the [warehouse/ESPEN/experiments/extended](./warehouse/ESPEN/experiments/extended) files. 
 
 <br>
 <br>
