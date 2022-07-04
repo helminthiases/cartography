@@ -4,7 +4,7 @@
 # Created on: 30/06/2022
 
 
-source(file = 'WASH/FetchMap.R')
+source(file = 'FetchMap.R')
 
 
 PointMapping <- function (experiment, path, year) {
