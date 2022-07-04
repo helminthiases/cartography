@@ -11,10 +11,10 @@ source(file = 'R/features/PointMapping.R')
 #'
 #' @param experiment: An experiments data set
 #' @param mapstring: must point to either /data/WASH/sewer/... or /data/WASH/water/...
-#' @param variable: either improved, piped, surface, unimproved, or unpiped
+#' @param name: either improved, piped, surface, unimproved, or unpiped
 #' @param affix:
 #'
-AddVariables <- function (experiment, mapstring, variable, affix) {
+AddVariables <- function (experiment, mapstring, name, affix) {
 
 
   # The years of the experiments data set
@@ -23,14 +23,14 @@ AddVariables <- function (experiment, mapstring, variable, affix) {
 
 
   # IHME WASH
-  case <- function(year, experiment, mapstring, variable, affix) {
+  case <- function(year, experiment, mapstring, name, affix) {
 
     # map path
     path <- paste0(mapstring, year, affix)
 
     # the feature values at a coordiate point
     derivations <- PointMapping(experiment, path, year)
-    names(derivations) <- variable
+    names(derivations) <- name
 
     # year
     # derivations$year <- year
@@ -42,7 +42,7 @@ AddVariables <- function (experiment, mapstring, variable, affix) {
   # structuring
   estimates <- mapply(FUN = case,
                       year = years,
-                      MoreArgs = list(experiment = experiment, mapstring = mapstring, variable = variable, affix = affix))
+                      MoreArgs = list(experiment = experiment, mapstring = mapstring, name = name, affix = affix))
   estimates <- dplyr::bind_rows(estimates)
 
 
