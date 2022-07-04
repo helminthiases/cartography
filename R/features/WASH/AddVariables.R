@@ -4,7 +4,7 @@
 # Created on: 30/06/2022
 
 
-source(file = '../PointMapping.R')
+source(file = 'PointMapping.R')
 
 
 #' A mind boggling investigation in progress
