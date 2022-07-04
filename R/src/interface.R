@@ -16,9 +16,9 @@ affix <- '_Y2020M06D02.TIF'
 
 
 # Unload steps
-case <- function (path, item, variable) {
+case <- function (path, item, variable, segment) {
   root <- paste0(endpoint, 'path=', path, '&files=')
-  storage <- file.path(getwd(), 'data', 'WASH', 'sewer', variable)
+  storage <- file.path(getwd(), 'data', 'WASH', segment, variable)
   Unload(root = root, item = item, affix = affix, storage = storage)
 
   return(TRUE)
@@ -37,14 +37,19 @@ items <- c('IHME_LMIC_WASH_2000_2017_S_IMP_PERCENT_MEAN_', 'IHME_LMIC_WASH_2000_
            'IHME_LMIC_WASH_2000_2017_S_UNIMP_PERCENT_MEAN_')
 variables <- c('improved', 'unpiped', 'surface', 'piped', 'unimproved')
 
-X <- mapply(FUN = case, variable = variables, path = paths, item = items)
+X <- mapply(FUN = case, variable = variables, path = paths, item = items, MoreArgs = list(segment = 'sewer'))
 
 
 
 # The water data of interest
+paths <- c('%2FW_IMP%20-%20Access%20to%20any%20improved%20water%20sources%20%5BGeoTIFF%5D%2FPercent',
+           '%2FW_IMP_OTHER%20-%20Access%20to%20non-piped%20improved%20water%20sources%20%5BGeoTIFF%5D%2FPercent',
+           '%2FW_SURFACE%20-%20Reliance%20on%20surface%20water%20%5BGeoTIFF%5D%2FPercent',
+           '%2FW_PIPED%20-%20Access%20to%20piped%20water%20%5BGeoTIFF%5D%2FPercent',
+           '%2FW_UNIMP%20-%20Reliance%20on%20unimproved%20water%20sources%20%5BGeoTIFF%5D%2FPercent')
+items <- c('IHME_LMIC_WASH_2000_2017_W_IMP_PERCENT_MEAN_', 'IHME_LMIC_WASH_2000_2017_W_IMP_OTHER_PERCENT_MEAN_',
+           'IHME_LMIC_WASH_2000_2017_W_SURFACE_PERCENT_MEAN_', 'IHME_LMIC_WASH_2000_2017_W_PIPED_PERCENT_MEAN_',
+           'IHME_LMIC_WASH_2000_2017_W_UNIMP_PERCENT_MEAN_')
+variables <- c('improved', 'unpiped', 'surface', 'piped', 'unimproved')
 
-# paths <-
-# items <-
-# variables <-
-
-# X <-
+X <- mapply(FUN = case, variable = variables, path = paths, item = items, MoreArgs = list(segment = 'water'))
