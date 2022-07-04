@@ -4,8 +4,6 @@
 # Created on: 29/06/2022
 
 
-source(file = '../../functions/Unlink.R')
-
 #' Fetches the map of a feature
 #'
 #' @description Uploads a LMIC (lower & middle income countries) WASH map
