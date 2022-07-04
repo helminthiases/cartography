@@ -42,5 +42,3 @@ E <- mapply(FUN = case, variable = variables,
             type = types,
             MoreArgs = list(file = files[1], root = root, affix = affix))
 dplyr::bind_cols(E)
-
-
