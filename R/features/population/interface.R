@@ -43,9 +43,28 @@ temporary <- function (year, root, affix, frame) {
   return(list(derivations))
 
 }
+
+
+# collating
 X <- mapply(FUN = temporary, year = years, MoreArgs = list(root = root, affix = affix, frame = frame))
 X <- dplyr::bind_rows(X)
 row.names(X) <- NULL
+
+
+# a set of values w.r.t. a location
+Y <- X[X$id == 1, c('year', 'estimate')]
+
+basis <- seq(from = 2000, to = 2020)
+basis <- basis[!(basis %in% years)]
+
+extra <- stats::spline(x = Y$year, y = Y$estimate, method = 'natural', xout = basis)
+extra <- data.frame(extra)
+extra <- dplyr::rename(extra, 'year' = 'x', 'estimate' = 'y')
+extra$year <- as.integer(extra$year)
+
+extra <- rbind(Y[, c('year', 'estimate')], extra)
+extra <- extra[with(extra, order(year, estimate)), ]
+
 
 
 
