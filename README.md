@@ -56,6 +56,9 @@ appended variables.
 #### Miscellaneous Features
 
 * [features available via ``r geodata``](https://github.com/rspatial/geodata#data)
+* [iSDA Soil](https://www.isda-africa.com/isdasoil/)
+  * [iSDA Soil Launch](https://envirometrix.nl/isdasoil-open-soil-data-for-africa/)
+* [Socioeconomic Data & Applications](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/documentation)  
 * [Global Colaboration Engine](http://globe.umbc.edu)
   * [GADM & GLOBE](http://globe.umbc.edu/documentation-overview/global-administrative-areas-gadm/)
   * [Variable Explorer](http://globe.umbc.edu/app/#/analysis/global-variables)
