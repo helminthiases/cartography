@@ -56,6 +56,7 @@ appended variables.
 #### Miscellaneous Features
 
 * [features available via ``r geodata``](https://github.com/rspatial/geodata#data)
+  * [population density data](https://geodata.ucdavis.edu/geodata/pop/)
 * [iSDA Soil](https://www.isda-africa.com/isdasoil/)
   * [iSDA Soil Launch](https://envirometrix.nl/isdasoil-open-soil-data-for-africa/)
 * [Socioeconomic Data & Applications](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/documentation)  
