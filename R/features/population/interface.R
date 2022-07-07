@@ -54,10 +54,12 @@ row.names(X) <- NULL
 # a set of values w.r.t. a location
 Y <- X[X$id == 1, c('year', 'estimate')]
 
-basis <- seq(from = 2000, to = 2020)
-basis <- basis[!(basis %in% years)]
+missing <- seq(from = 2000, to = 2020)
+missing <- missing[!(missing %in% years)]
 
-extra <- stats::spline(x = Y$year, y = Y$estimate, method = 'natural', xout = basis)
+
+# spline interpolation for missing years estimates
+extra <- stats::spline(x = Y$year, y = Y$estimate, method = 'natural', xout = missing)
 extra <- data.frame(extra)
 extra <- dplyr::rename(extra, 'year' = 'x', 'estimate' = 'y')
 extra$year <- as.integer(extra$year)
