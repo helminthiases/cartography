@@ -4,6 +4,15 @@ Development Notes
 
 <br>
 
+### Notebooks
+
+For more about Jupyter Lab Notebook & R:
+
+* [Setup Jupyter Notebook for R](https://developers.refinitiv.com/en/article-catalog/article/setup-jupyter-notebook-r)
+
+<br>
+<br>
+
 ### Snippets
 
 ```R
