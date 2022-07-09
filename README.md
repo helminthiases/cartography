@@ -66,6 +66,7 @@ appended variables.
   * [Variable Explorer](http://globe.umbc.edu/app/#/analysis/global-variables)
 * [Spatial Data](https://www.diva-gis.org)
 * [National Oceanic & Atmospheric Administration (NOAA)](https://www.ncdc.noaa.gov/cdo-web/datasets)
+  * [EVI](https://data.nasa.gov/browse?q=enhanced%20vegetation%20index&sortBy=relevance)
 * [WorldClim](https://www.worldclim.org/data/index.html)
 * [Map projections](https://www.usgs.gov/publications/map-projections)
 
