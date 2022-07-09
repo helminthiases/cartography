@@ -28,8 +28,10 @@ estimates <- mapply(FUN = PointMapping, year = years, MoreArgs = list(root = roo
 estimates <- dplyr::bind_rows(estimates)
 row.names(estimates) <- NULL
 
+interpolations <- mapply(FUN = Interpolating, id = unique(estimates$id),
+                         MoreArgs = list(estimates = estimates, years = years))
+interpolations <- dplyr::bind_rows(interpolations)
+row.names(interpolations) <- NULL
+interpolations <- rename(interpolations, 'p_density' = 'estimate')
 
-
-
-
-
+extended <- dplyr::left_join(x = frame, y = interpolations, by = c('id', 'year'))
