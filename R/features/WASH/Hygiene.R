@@ -47,6 +47,7 @@ Hygiene <- function (file, variables, items, types, repo, affix, storage) {
 
     frame <- base::merge(x = experiment, y = factors, by = 0, all.x = TRUE, sort = FALSE)
     frame <- base::subset(x = frame, select = -Row.names)
+    str(frame)
 
     utils::write.table(x = frame,
                        file = file.path(storage, base::basename(path = file)),
