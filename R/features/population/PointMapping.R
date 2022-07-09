@@ -28,8 +28,8 @@ PointMapping <- function (year, root, affix, frame) {
   estimate <- colnames(derivations)[startsWith(colnames(derivations), prefix = 'gpw_v4_')]
   derivations <- dplyr::rename(derivations, 'estimate' = dplyr::all_of(estimate), 'longitude' = 'x', 'latitude' = 'y')
 
-  # observation number
-  derivations$number <- seq(from = 1, to = nrow(derivations))
+  # unique observation code
+  derivations$id <- frame$id
 
   # year
   derivations$year <- as.integer(year)
