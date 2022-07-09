@@ -21,7 +21,8 @@ PointMapping <- function (experiment, path, year) {
 
   # Variable values w.r.t. ...
   derivations <- terra::extract(x = map, y = points, method = 'bilinear')
-  row.names(derivations) <- row.names(frame[derivations$ID, ])
+  derivations <- derivations[base::order(derivations$ID), ]
+  row.names(derivations) <- row.names(points)
 
   # Exclude ID
   # derivations <- derivations %>% dplyr::select(!ID)
