@@ -15,7 +15,7 @@ UnlinkDirectories <- function (path) {
 
 UnlinkFiles <- function (path) {
 
-  if (file.exists(path)) {
+  if (file.exists(base::dirname(path = path))) {
     base::unlink(path)
   }
 
