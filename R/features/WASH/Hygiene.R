@@ -30,8 +30,8 @@ Hygiene <- function (file, variables, items, types, repo, affix, storage) {
   # per WASH variable, this function will return the variable estimate per observation,
   # using the observation's geographic coordinates and its experiment year
   case <- function (variable, item, type, experiment, repo, affix) {
-    estimates <- AddVariables(experiment = experiment, mapstring = file.path(repo, type, variable, item),
-                              name = paste0(variable, '_', type), affix = affix)
+    estimates <- FetchVariables(experiment = experiment, mapstring = file.path(repo, type, variable, item),
+                                name = paste0(variable, '_', type), affix = affix)
     return(list(estimates))
   }
 
