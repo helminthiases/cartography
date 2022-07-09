@@ -24,6 +24,7 @@ Hygiene <- function (file, variables, items, types, repo, affix, storage) {
   # the experiments data set in focus
   experiment <- read.csv(file = file)
   years <- unique(experiment$year)
+  period <- seq(from = 2000, to = 2017)
 
 
   # per WASH variable, this function will return the variable estimate per observation,
@@ -36,7 +37,7 @@ Hygiene <- function (file, variables, items, types, repo, affix, storage) {
 
 
   # the function is applicable to observations wherein the experiment year ∈ [2000 2017]
-  if (sum(years %in% seq(from = 2000, to = 2017)) > 0) {
+  if (sum(years %in% period) > 0) {
 
     factors <- mapply(FUN = case, variable = variables,
                       item = items,
@@ -44,7 +45,9 @@ Hygiene <- function (file, variables, items, types, repo, affix, storage) {
                       MoreArgs = list(experiment = experiment, repo = repo, affix = affix))
     factors <- dplyr::bind_cols(factors)
 
-    frame <- base::merge(x = experiment, y = factors, by = 0, all.x = TRUE)
+    frame <- base::merge(x = experiment, y = factors, by = 0, all.x = TRUE, sort = FALSE)
+    frame <- base::subset(x = frame, select = -Row.names)
+
     utils::write.table(x = frame,
                        file = file.path(storage, base::basename(path = file)),
                        append = FALSE,
