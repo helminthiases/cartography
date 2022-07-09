@@ -1,5 +1,5 @@
 # Title     : FetchVariables.R
-# Objective : Add variables
+# Objective : Fetch variables
 # Created by: greyhypotheses
 # Created on: 30/06/2022
 
