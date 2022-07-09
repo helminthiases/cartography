@@ -18,7 +18,7 @@ Hygiene <- function (file, variables, items, types, repo, affix, storage) {
 
 
   # the features function
-  source(file = 'R/features/WASH/AddVariables.R')
+  source(file = 'R/features/WASH/FetchVariables.R')
 
 
   # the experiments data set in focus
