@@ -5,7 +5,7 @@
 
 
 source(file = 'R/features/population/PointMapping.R')
-source(file = 'Interpolating.R')
+source(file = 'R/features/population/Interpolating.R')
 
 
 # the list of experiment files
