@@ -14,7 +14,7 @@ source(file = 'R/features/WASH/PointMapping.R')
 #' @param name: either improved, piped, surface, unimproved, or unpiped
 #' @param affix:
 #'
-AddVariables <- function (experiment, mapstring, name, affix) {
+FetchVariables <- function (experiment, mapstring, name, affix) {
 
 
   # The years of the experiments data set
