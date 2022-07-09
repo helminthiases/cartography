@@ -4,7 +4,7 @@
 # Created on: 09/07/2022
 
 
-Interpolations <- function (id, estimates, years) {
+Interpolating <- function (id, estimates, years) {
 
 
   # the set of values w.r.t. an observation
