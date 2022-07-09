@@ -46,10 +46,6 @@ AddVariables <- function (experiment, mapstring, name, affix) {
   estimates <- dplyr::bind_rows(estimates)
 
 
-  # ensure the row identifiers are in order
-  estimates <- estimates[order(as.numeric(row.names(estimates))), 1, drop = FALSE]
-
-
   return(estimates)
 
 
