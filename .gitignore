@@ -44,3 +44,6 @@ vignettes/*.pdf
 # Jupyter Notebook
 *.ipynb_checkpoints
 
+# Jupyter Notebook Outputs
+/notebooks/*.csv
+
