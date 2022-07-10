@@ -24,3 +24,13 @@ if (dir.exists(storage)) {
   base::unlink(x = storage, recursive = TRUE)
 }
 dir.create(path = storage, recursive = TRUE)
+
+
+# in parallel
+cores <- parallel::detectCores() - 2
+doParallel::registerDoParallel(cores = cores)
+clusters <- parallel::makeCluster(cores)
+parallel::clusterMap(clusters, fun = Densities, files,
+                     MoreArgs = list(years = years, root = root, affix = affix, storage = storage))
+parallel::stopCluster(clusters)
+rm(clusters, cores)
