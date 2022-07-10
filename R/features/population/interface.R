@@ -8,7 +8,7 @@ source(file = 'R/features/population/Densities.R')
 
 
 # the list of experiment files
-files <- list.files(path = file.path(getwd(), 'warehouse', 'WASH'),
+files <- list.files(path = file.path(getwd(), 'warehouse', 'features', 'WASH'),
                     full.names = TRUE)
 
 
@@ -25,6 +25,7 @@ if (dir.exists(storage)) {
 }
 dir.create(path = storage, recursive = TRUE)
 
+Densities(file = files[3], years = years, root = root, affix = affix, storage = storage)
 
 # in parallel
 cores <- parallel::detectCores() - 2
