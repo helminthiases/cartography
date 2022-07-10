@@ -28,10 +28,15 @@ estimates <- mapply(FUN = PointMapping, year = years, MoreArgs = list(root = roo
 estimates <- dplyr::bind_rows(estimates)
 row.names(estimates) <- NULL
 
+# In <estimates> each observation of <frame> is associated with population density
+# estimates for the years {2000, 2005, 2010, 2015, 2020}.  Remember, the observation
+# code is field <id>.  The function Interpolating(.) estimates the population
+# densities of the intervening years.
 interpolations <- mapply(FUN = Interpolating, id = unique(estimates$id),
                          MoreArgs = list(estimates = estimates, years = years))
 interpolations <- dplyr::bind_rows(interpolations)
 row.names(interpolations) <- NULL
 interpolations <- rename(interpolations, 'p_density' = 'estimate')
 
+# finally, appending a population density field to <frame>
 extended <- dplyr::left_join(x = frame, y = interpolations, by = c('id', 'year'))
