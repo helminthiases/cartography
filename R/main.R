@@ -9,3 +9,6 @@ source(file = 'R/src/WASH/interface.R')
 
 # Add IHME WASH features to each STH experiments data file
 source(file = 'R/features/WASH/interface.R')
+
+# Add population density
+source(file = 'R/features/population/interface.R')
