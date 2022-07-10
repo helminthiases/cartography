@@ -36,7 +36,7 @@ Densities <- function(file, years, root, affix, storage) {
                            MoreArgs = list(estimates = estimates, years = years))
   interpolations <- dplyr::bind_rows(interpolations)
   row.names(interpolations) <- NULL
-  interpolations <- rename(interpolations, 'p_density' = 'estimate')
+  interpolations <- dplyr::rename(interpolations, 'p_density' = 'estimate')
 
 
   # Finally, appending a population density field to <frame>
