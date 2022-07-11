@@ -31,7 +31,7 @@ Hygiene <- function (file, variables, items, types, repo, affix, storage) {
   # the function is applicable to observations wherein the experiment year ∈ [2000 2017]
   if (sum(years %in% period) > 0) {
     AddVariables(experiment = experiment, variables = variables, items = items,
-                 types = types, repo = repo, affix = affix, storage = storage)
+                 types = types, repo = repo, affix = affix, storage = storage, name = base::basename(path = file))
   }
 
 
