@@ -4,6 +4,12 @@
 # Created on: 09/07/2022
 
 
+#' Interpolating Population Density Estimates
+#'
+#' @param id: an observation code
+#' @param estimates: the observation's population density estimates per map year
+#' @param years: the years for which "estimated population density maps" exist
+#'
 Interpolating <- function (id, estimates, years) {
 
 
