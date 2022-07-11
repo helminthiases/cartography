@@ -56,11 +56,17 @@ appended variables.
 #### Miscellaneous Features
 
 * [features available via ``r geodata``](https://github.com/rspatial/geodata#data)
+  * [population density data](https://geodata.ucdavis.edu/geodata/pop/)
+  * [population density data details](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/whatsnew)
+* [iSDA Soil](https://www.isda-africa.com/isdasoil/)
+  * [iSDA Soil Launch](https://envirometrix.nl/isdasoil-open-soil-data-for-africa/)
+* [Socioeconomic Data & Applications](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/documentation)  
 * [Global Colaboration Engine](http://globe.umbc.edu)
   * [GADM & GLOBE](http://globe.umbc.edu/documentation-overview/global-administrative-areas-gadm/)
   * [Variable Explorer](http://globe.umbc.edu/app/#/analysis/global-variables)
 * [Spatial Data](https://www.diva-gis.org)
 * [National Oceanic & Atmospheric Administration (NOAA)](https://www.ncdc.noaa.gov/cdo-web/datasets)
+  * [EVI](https://data.nasa.gov/browse?q=enhanced%20vegetation%20index&sortBy=relevance)
 * [WorldClim](https://www.worldclim.org/data/index.html)
 * [Map projections](https://www.usgs.gov/publications/map-projections)
 

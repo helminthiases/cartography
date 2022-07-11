@@ -31,8 +31,8 @@ affix <- '_Y2020M06D02.TIF'
 
 
 # storage
-storage <- file.path(getwd(), 'warehouse', 'ESPEN', 'experiments', 'extended')
-if (dir.exists(storage)) {
+storage <- file.path(getwd(), 'warehouse', 'features', 'WASH')
+if (dir.exists(dirname(storage))) {
   base::unlink(x = storage, recursive = TRUE)
 }
 dir.create(path = storage, recursive = TRUE)

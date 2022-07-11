@@ -40,3 +40,10 @@ vignettes/*.pdf
 
 # IntelliJ IDEA
 .idea
+
+# Jupyter Notebook
+*.ipynb_checkpoints
+
+# Jupyter Notebook Outputs
+/notebooks/*.csv
+

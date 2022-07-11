@@ -5,7 +5,10 @@
 
 
 # Unload IHME WASH maps
-source(file = 'R/src/interface.R')
+source(file = 'R/src/WASH/interface.R')
 
-# Add IHME WASH featuures to each STH experiments data file
+# Add IHME WASH features to each STH experiments data file
 source(file = 'R/features/WASH/interface.R')
+
+# Add population density
+source(file = 'R/features/population/interface.R')

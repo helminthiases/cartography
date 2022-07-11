@@ -1,56 +1,59 @@
 # Title     : AddVariables.R
-# Objective : Add variables
+# Objective : Add Variables
 # Created by: greyhypotheses
-# Created on: 30/06/2022
+# Created on: 09/07/2022
 
 
-source(file = 'R/features/WASH/PointMapping.R')
 
-
-#' A mind boggling investigation in progress
+#' Add Variables
 #'
-#' @param experiment: An experiments data set
-#' @param mapstring: must point to either /data/WASH/sewer/... or /data/WASH/water/...
-#' @param name: either improved, piped, surface, unimproved, or unpiped
-#' @param affix:
+#' @param experiment: An experiments data set.
+#' @param variables: The set of sewer & water variables of interest.
+#' @param items: Their corresponding, and distinctive, file name patterns.
+#' @param types: A sewer or water variable?
+#' @param repo: The directory within which the sewer & water data directories are located.
+#' @param affix: The terminating string of each file.  An IHME peculiarity.
+#' @param storage: The storage directory
 #'
-AddVariables <- function (experiment, mapstring, name, affix) {
+AddVariables <- function (experiment, variables, items, types, repo, affix, storage, name) {
 
 
-  # The years of the experiments data set
-  years <- unique(experiment$year)
-  years <- years[years %in% seq(from = 2000, to = 2017)]
+  # the features fetch function
+  source(file = 'R/features/WASH/FetchVariables.R')
 
 
-  # IHME WASH
-  case <- function(year, experiment, mapstring, name, affix) {
-
-    # map path
-    path <- paste0(mapstring, year, affix)
-
-    # the feature values at a coordiate point
-    derivations <- PointMapping(experiment, path, year)
-    names(derivations) <- name
-
-    # year
-    # derivations$year <- year
-
-    return(list(derivations))
+  # per WASH variable, this function will return the variable estimate per observation,
+  # using the observation's geographic coordinates and its experiment year
+  case <- function (variable, item, type, experiment, repo, affix) {
+    estimates <- FetchVariables(experiment = experiment, mapstring = file.path(repo, type, variable, item),
+                                name = paste0(variable, '_', type), affix = affix)
+    return(list(estimates))
   }
 
 
-  # structuring
-  estimates <- mapply(FUN = case,
-                      year = years,
-                      MoreArgs = list(experiment = experiment, mapstring = mapstring, name = name, affix = affix))
-  estimates <- dplyr::bind_rows(estimates)
+  # hence
+  factors <- mapply(FUN = case, variable = variables,
+                    item = items,
+                    type = types,
+                    MoreArgs = list(experiment = experiment, repo = repo, affix = affix))
+  factors <- dplyr::bind_cols(factors)
 
 
-  # ensure the row identifiers are in order
-  estimates <- estimates[order(as.numeric(row.names(estimates))), 1, drop = FALSE]
+  # experiment + variables
+  frame <- base::merge(x = experiment, y = factors, by = 0, all.x = TRUE, sort = FALSE)
+  frame <- base::subset(x = frame, select = -Row.names)
+  str(frame)
 
 
-  return(estimates)
+  # write
+  utils::write.table(x = frame,
+                     file = file.path(storage, name),
+                     append = FALSE,
+                     quote = TRUE,
+                     sep = ',',
+                     row.names = FALSE,
+                     col.names = TRUE,
+                     fileEncoding = 'UTF-8')
 
 
 }
