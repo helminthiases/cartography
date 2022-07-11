@@ -25,7 +25,6 @@ if (dir.exists(storage)) {
 }
 dir.create(path = storage, recursive = TRUE)
 
-Densities(file = files[3], years = years, root = root, affix = affix, storage = storage)
 
 # in parallel
 cores <- parallel::detectCores() - 2
