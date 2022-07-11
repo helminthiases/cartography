@@ -29,6 +29,12 @@ Densities <- function(file, years, root, affix, storage) {
   row.names(estimates) <- NULL
 
 
+  # Missing values cannot be interpolated
+  unavailable <- estimates[is.na(estimates$estimate), ]
+  indices <- unique(unavailable$id)
+  estimates <- estimates[!(estimates$id %in% indices), ]
+
+
   # In <estimates> each observation of <frame> is associated with population density
   # estimates for the years {2000, 2005, 2010, 2015, 2020}.  Remember, the observation
   # code is field <id>.  The function Interpolating(.) estimates the population
