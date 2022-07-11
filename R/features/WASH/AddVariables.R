@@ -15,7 +15,7 @@
 #' @param affix: The terminating string of each file.  An IHME peculiarity.
 #' @param storage: The storage directory
 #'
-AddVariables <- function (experiment, variables, items, types, repo, affix, storage) {
+AddVariables <- function (experiment, variables, items, types, repo, affix, storage, name) {
 
 
   # the features fetch function
@@ -47,8 +47,9 @@ AddVariables <- function (experiment, variables, items, types, repo, affix, stor
 
   # write
   utils::write.table(x = frame,
-                     file = file.path(storage, base::basename(path = file)),
+                     file = file.path(storage, name),
                      append = FALSE,
+                     quote = TRUE,
                      sep = ',',
                      row.names = FALSE,
                      col.names = TRUE,
