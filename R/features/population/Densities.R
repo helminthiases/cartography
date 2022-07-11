@@ -18,8 +18,9 @@ Densities <- function(file, years, root, affix, storage) {
   source(file = 'R/features/population/PointMapping.R')
   source(file = 'R/features/population/Interpolating.R')
 
+
   # An experiments file
-  frame <- read.csv(file = file)
+  frame <- read.csv(file = file, encoding = 'UTF-8')
 
 
   # Per observation, and via its coordinates, the population density estimates per map year
