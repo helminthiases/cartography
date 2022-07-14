@@ -26,9 +26,6 @@ if (dir.exists(storage)) {
 dir.create(path = storage, recursive = TRUE)
 
 
-# Densities(file = file.path(..., 'CD.csv'), years = years, root = root, affix = affix, storage = storage)
-
-
 # in parallel
 cores <- parallel::detectCores() - 2
 doParallel::registerDoParallel(cores = cores)
