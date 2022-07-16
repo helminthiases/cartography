@@ -21,53 +21,48 @@ latitude | The latitude geographic co&ouml;rdinate value.
 
 and much more.  Due to the presence of the latitude & longitude values, we can extract feature value estimates from 
 geospatial variable objects.  Hence, the focus herein is the derivation of features estimates of interest, per location 
-within a STH ESPEN data set.
+within a STH ESPEN data set.  Initially, the features of interest are 
 
-Initially, the features of interest are WASH (water, sanitation, and hygiene) features.  For a preview of estimations thus far, 
-explore the [warehouse/ESPEN/experiments/extended](./warehouse/ESPEN/experiments/extended) files - each should have 
-appended variables. 
+* WASH (water, sanitation, and hygiene) features.
+* Population density.
+* Elevation.
+
+In the future, land surface temperature and enhanced vegetation index.
 
 <br>
 <br>
 
 ### References
 
-
-#### WASH
-
 * [IHME WASH](https://www.healthdata.org/research-article/mapping-geographic-inequalities-access-drinking-water-and-sanitation-facilities-low)
 
-
-#### Administrative Areas
-
 * [Global Administrative Areas (GADM)](https://gadm.org)
-* The co&ouml;rdinate reference system details of a GADM map are visible at the bottom of 
-  [a country page](https://gadm.org/download_country.html), after selecting a country.  It is ``EPSG:4326``.
-
-
-#### ESPEN
-
+  * The co&ouml;rdinate reference system details of a GADM map are visible at the bottom 
+    of [a country page](https://gadm.org/download_country.html), after selecting a country.  It is ``EPSG:4326``.
+  * [Global Colaboration Engine](http://globe.umbc.edu)
+  * [GADM & GLOBE](http://globe.umbc.edu/documentation-overview/global-administrative-areas-gadm/)
+  * [Variable Explorer](http://globe.umbc.edu/app/#/analysis/global-variables)  
+    
 * [ESPEN](https://espen.afro.who.int/)
   * [ESPEN Cartography Database](https://espen.afro.who.int/tools-resources/cartography-database)
   * [ESPEN API](https://admin.espen.afro.who.int/docs/api)
   * [ESPEN API Documentation](https://espen.stoplight.io)
-  
 
-#### Miscellaneous Features
-
-* [features available via ``r geodata``](https://github.com/rspatial/geodata#data)
+* [Features available via ``r geodata``](https://github.com/rspatial/geodata#data)
   * [population density data](https://geodata.ucdavis.edu/geodata/pop/)
   * [population density data details](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/whatsnew)
+  * [Socioeconomic Data & Applications](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/documentation)
+
 * [iSDA Soil](https://www.isda-africa.com/isdasoil/)
   * [iSDA Soil Launch](https://envirometrix.nl/isdasoil-open-soil-data-for-africa/)
-* [Socioeconomic Data & Applications](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/documentation)  
-* [Global Colaboration Engine](http://globe.umbc.edu)
-  * [GADM & GLOBE](http://globe.umbc.edu/documentation-overview/global-administrative-areas-gadm/)
-  * [Variable Explorer](http://globe.umbc.edu/app/#/analysis/global-variables)
+  
 * [Spatial Data](https://www.diva-gis.org)
+  
 * [National Oceanic & Atmospheric Administration (NOAA)](https://www.ncdc.noaa.gov/cdo-web/datasets)
   * [EVI](https://data.nasa.gov/browse?q=enhanced%20vegetation%20index&sortBy=relevance)
+
 * [WorldClim](https://www.worldclim.org/data/index.html)
+  
 * [Map projections](https://www.usgs.gov/publications/map-projections)
 
 <br>
