@@ -12,3 +12,6 @@ source(file = 'R/features/WASH/interface.R')
 
 # Add population density
 source(file = 'R/features/population/interface.R')
+
+# Add elevation
+source(file = 'R/features/elevation/interface.R')
