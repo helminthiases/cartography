@@ -39,7 +39,7 @@ PointMapping <- function (file, storage) {
 
   # Merge
   frame <- base::merge(x = frame, y = derivations, by = 0, all.x = TRUE, sort = FALSE)
-  print(frame)
+  frame[, 'Row.names'] <- NULL
 
   # Write
   utils::write.table(x = frame,
