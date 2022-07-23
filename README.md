@@ -42,12 +42,7 @@ In the future, land surface temperature and enhanced vegetation index.
   * [Global Colaboration Engine](http://globe.umbc.edu)
   * [GADM & GLOBE](http://globe.umbc.edu/documentation-overview/global-administrative-areas-gadm/)
   * [Variable Explorer](http://globe.umbc.edu/app/#/analysis/global-variables)  
-    
-* [ESPEN](https://espen.afro.who.int/)
-  * [ESPEN Cartography Database](https://espen.afro.who.int/tools-resources/cartography-database)
-  * [ESPEN API](https://admin.espen.afro.who.int/docs/api)
-  * [ESPEN API Documentation](https://espen.stoplight.io)
-
+  
 * [Features available via ``r geodata``](https://github.com/rspatial/geodata#data)
   * [population density data](https://geodata.ucdavis.edu/geodata/pop/)
   * [population density data details](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/whatsnew)
@@ -56,10 +51,9 @@ In the future, land surface temperature and enhanced vegetation index.
 * [iSDA Soil](https://www.isda-africa.com/isdasoil/)
   * [iSDA Soil Launch](https://envirometrix.nl/isdasoil-open-soil-data-for-africa/)
   
-* [Spatial Data](https://www.diva-gis.org)
+* [DIVA GIS Spatial Data](https://www.diva-gis.org/Data)
   
 * [National Oceanic & Atmospheric Administration (NOAA)](https://www.ncdc.noaa.gov/cdo-web/datasets)
-  * [EVI](https://data.nasa.gov/browse?q=enhanced%20vegetation%20index&sortBy=relevance)
 
 * [WorldClim](https://www.worldclim.org/data/index.html)
   
