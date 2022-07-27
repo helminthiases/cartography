@@ -31,12 +31,16 @@ AddVariables <- function (experiment, variables, items, types, repo, affix, stor
   }
 
 
-  # hence
+  # hence, the WASH variables estimates per observation
   factors <- mapply(FUN = case, variable = variables,
                     item = items,
                     type = types,
                     MoreArgs = list(experiment = experiment, repo = repo, affix = affix))
   factors <- dplyr::bind_cols(factors)
+
+
+  # the access percentage values are values within the range [0  100]
+  factors[factors < 0 | factors > 100] <- NA_real_
 
 
   # experiment + variables
