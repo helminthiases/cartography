@@ -13,7 +13,7 @@ source(file = 'R/features/WASH/Hygiene.R')
 
 # the list of experiment files
 files <- list.files(path = file.path(dirname(getwd()),
-                                     'infections', 'warehouse', 'data', 'ESPEN', 'networks', 'graphs'),
+                                     'infections', 'warehouse', 'data', 'ESPEN', 'experiments', 'reduced'),
                     full.names = TRUE)
 
 

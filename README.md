@@ -27,7 +27,7 @@ within a STH ESPEN data set.  Initially, the features of interest are
 * Population density.
 * Elevation.
 
-In the future, _land surface temperature_ and _enhanced vegetation index_ features can be added.
+Future options include _land surface temperature_ and _enhanced vegetation index_.
 
 <br>
 <br>
