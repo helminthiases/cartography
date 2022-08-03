@@ -71,6 +71,8 @@ FieldEstimates <- function (ISO2, ISO3, paths) {
   T <- lapply(X = variables, FUN = .estimate)
   T <- dplyr::bind_cols(T)
   T <- cbind(experiment, T)
+  T <- sf::st_drop_geometry(T)
+  T <- base::subset(x = T, select = -c(x, y))
 
 
   # Write
