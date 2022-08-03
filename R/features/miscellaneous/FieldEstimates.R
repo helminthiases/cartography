@@ -51,10 +51,6 @@ FieldEstimates <- function (ISO2, ISO3, paths) {
     # via the preceding raster
     estimates <- terra::extract(terrain.estimates, terra::vect(experiment), method = 'bilinear')
 
-    # Ensuring order
-    estimates <- estimates[base::order(estimates$ID), ]
-    row.names(estimates) <- row.names(terrain.estimates)
-
     # Drop the record number field, i.e., drop <ID>
     estimates <- base::subset(x = estimates, select = -ID)
 
