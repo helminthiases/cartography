@@ -15,7 +15,7 @@ affix <- '_Y2020M06D02.TIF'
 # Unload steps
 case <- function (path, item, variable, segment) {
   root <- paste0(endpoint, 'path=', path, '&files=')
-  storage <- file.path(getwd(), '../../../data', 'WASH', segment, variable)
+  storage <- file.path(getwd(), 'data', 'WASH', segment, variable)
   Unload(root = root, item = item, affix = affix, storage = storage)
 
   return(TRUE)
