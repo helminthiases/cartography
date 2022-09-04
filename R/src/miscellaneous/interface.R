@@ -10,7 +10,7 @@ source(file = 'R/src/miscellaneous/EnviromentalFeatures.R')
 
 
 # Preparing a directory for disaggregated miscellaneous features
-pathstr <- file.path(getwd(), 'warehouse', 'sources', 'miscellaneous')
+pathstr <- file.path(getwd(), 'data', 'miscellaneous', 'disaggregates')
 if (dir.exists(paths = pathstr)) {
   base::unlink(pathstr, recursive = TRUE)
 }
