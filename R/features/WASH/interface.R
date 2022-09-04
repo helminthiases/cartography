@@ -11,10 +11,13 @@ rm(list = ls())
 source(file = 'R/features/WASH/Hygiene.R')
 
 
-# the list of experiment files
-files <- list.files(path = file.path(dirname(getwd()),
-                                     'infections', 'warehouse', 'data', 'ESPEN', 'experiments', 'reduced'),
+# the experiments data, and more
+files <- list.files(path = file.path(getwd(), 'warehouse', 'features', 'data'),
                     full.names = TRUE)
+
+
+# storage
+storage <- file.path(getwd(), 'warehouse', 'features', 'data')
 
 
 # arguments
@@ -30,14 +33,6 @@ variables <- c('improved', 'unpiped', 'surface', 'piped', 'unimproved',
 affix <- '_Y2020M06D02.TIF'
 
 
-# storage
-storage <- file.path(getwd(), 'warehouse', 'features', 'WASH')
-if (dir.exists(dirname(storage))) {
-  base::unlink(x = storage, recursive = TRUE)
-}
-dir.create(path = storage, recursive = TRUE)
-
-
 # in parallel
 cores <- parallel::detectCores() - 2
 doParallel::registerDoParallel(cores = cores)
@@ -47,4 +42,3 @@ parallel::clusterMap(clusters, fun = Hygiene, files,
                                      repo = repo, affix = affix, storage = storage))
 parallel::stopCluster(clusters)
 rm(clusters, cores)
-
