@@ -7,17 +7,13 @@
 source(file = 'R/features/elevation/PointMapping.R')
 
 
-# the list of experiment files
-files <- list.files(path = file.path(getwd(), 'warehouse', 'features', 'population'),
+# the experiments data, and more
+files <- list.files(path = file.path(getwd(), 'warehouse', 'features', 'data'),
                     full.names = TRUE)
 
 
 # storage
-storage <- file.path(getwd(), 'warehouse', 'features', 'elevation')
-if (dir.exists(storage)) {
-  base::unlink(x = storage, recursive = TRUE)
-}
-dir.create(path = storage, recursive = TRUE)
+storage <- file.path(getwd(), 'warehouse', 'features', 'data')
 
 
 # in parallel
