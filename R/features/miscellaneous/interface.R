@@ -7,22 +7,18 @@
 source(file = 'R/features/miscellaneous/FieldEstimates.R')
 
 
-# Preparing a data directory
-pathstr <- file.path(getwd(), 'warehouse', 'features', 'miscellaneous')
-if (dir.exists(paths = pathstr)) {
-  base::unlink(pathstr, recursive = TRUE)
-}
-dir.create(path = pathstr, showWarnings = TRUE, recursive = TRUE)
+# Storage
+pathstr <- file.path(getwd(), 'warehouse', 'features', 'data')
 
 
 # The stem names of the files undergoing enhancement.
-codes <- list.files(path = file.path(getwd(), 'warehouse', 'features', 'elevation'), full.names = FALSE)
+codes <- list.files(path = file.path(getwd(), 'warehouse', 'features', 'data'), full.names = FALSE)
 codes <- stringr::str_replace(codes, pattern = '.csv', replacement = '')
 codes <- codes[!(codes %in% 'ZZ')]
 
 
 # Paths
-paths <- list(experiment = file.path(getwd(), 'warehouse', 'features', 'elevation'),
+paths <- list(experiment = file.path(getwd(), 'warehouse', 'features', 'data'),
               features = file.path(getwd(), 'data', 'miscellaneous', 'disaggregates'),
               storage = pathstr)
 
