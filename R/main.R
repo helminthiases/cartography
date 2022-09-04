@@ -5,8 +5,8 @@
 
 
 # Data
-source(file = 'R/src/experiments')
-source(file = 'R/src/miscellaneous')
+source(file = 'R/src/experiments/interface.R')
+source(file = 'R/src/elevation/interface.R')
 source(file = 'R/src/population/interface.R')
 source(file = 'R/src/WASH/interface.R')
 
