@@ -6,9 +6,9 @@
 
 # Data
 source(file = 'R/src/experiments/interface.R')
-source(file = 'R/src/elevation/interface.R')
-source(file = 'R/src/population/interface.R')
 source(file = 'R/src/WASH/interface.R')
+source(file = 'R/src/population/interface.R')
+source(file = 'R/src/elevation/interface.R')
 
 
 # The baseline: the basic experiments data
