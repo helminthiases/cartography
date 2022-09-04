@@ -5,9 +5,14 @@
 
 
 # Data
+source(file = 'R/src/experiments')
 source(file = 'R/src/miscellaneous')
 source(file = 'R/src/population/interface.R')
 source(file = 'R/src/WASH/interface.R')
+
+
+# The baseline: the basic experiments data
+source(file = 'R/features/experiments/interface.R')
 
 # Add IHME WASH features to each STH experiments data file
 source(file = 'R/features/WASH/interface.R')
@@ -17,9 +22,6 @@ source(file = 'R/features/population/interface.R')
 
 # Add elevation
 source(file = 'R/features/elevation/interface.R')
-
-# Add miscellaneous
-source(file = 'R/features/miscellaneous/interface.R')
 
 # Export
 source(file = 'R/export.R')
