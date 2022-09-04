@@ -23,7 +23,7 @@ codes <- codes[!(codes %in% 'ZZ')]
 
 # Paths
 paths <- list(experiment = file.path(getwd(), 'warehouse', 'features', 'elevation'),
-              features = file.path(getwd(), 'warehouse', 'sources', 'miscellaneous'),
+              features = file.path(getwd(), 'data', 'miscellaneous', 'disaggregates'),
               storage = pathstr)
 
 
