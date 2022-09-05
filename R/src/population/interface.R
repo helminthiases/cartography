@@ -38,5 +38,4 @@ clusters <- parallel::makeCluster(cores)
 parallel::clusterMap(clusters, fun = temporary, years,
                      MoreArgs = list(root = root, affix = affix, storage = storage))
 parallel::stopCluster(clusters)
-
 rm(clusters, cores)

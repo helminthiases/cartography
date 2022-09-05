@@ -41,9 +41,7 @@ vignettes/*.pdf
 # IntelliJ IDEA
 .idea
 
-# Jupyter Notebook
-*.ipynb_checkpoints
-
-# Jupyter Notebook Outputs
-/notebooks/*.csv
-
+# Large files
+data/elevation/wc2.1_30s_elev.tif
+data/miscellaneous/covariates_10km.rds
+data/population/*_30s.tif

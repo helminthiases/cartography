@@ -13,7 +13,7 @@ dir.create(path = external, recursive = TRUE)
 
 
 # the files to be delivered to the <modelling> repository
-src <- list.files(path = file.path(getwd(), 'warehouse', 'features', 'miscellaneous'),
+src <- list.files(path = file.path(getwd(), 'warehouse', 'features', 'data'),
                   full.names = TRUE)
 
 
