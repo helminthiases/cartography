@@ -1,5 +1,13 @@
 <br>
 
+[Geospatial Variables](#geospatial-variables)
+ * [WaSH](#wash)
+ * [Elevation](#elevation)
+ * [Population Density](#population-density)
+
+<br>
+<br>
+
 ## Geospatial Variables
 
 <br>
@@ -32,7 +40,15 @@ Future options include _land surface temperature_ and _enhanced vegetation index
 <br>
 <br>
 
-### About Elevation
+### WaSH
+
+The WaSH data is courtesy of [IHME WaSH](https://www.healthdata.org/research-article/mapping-geographic-inequalities-access-drinking-water-and-sanitation-facilities-low)
+
+
+<br>
+<br>
+
+### Elevation
 
 The list below summarises a set of [World Climate](https://worldclim.org/data/worldclim21.html) elevations maps.  The maps are
 derivations/versions of the  [Shuttle Radar Topography Mission's](https://lpdaac.usgs.gov/products/srtmgl1v003/) elevation
@@ -43,45 +59,21 @@ maps.  In terms of the Soil Transmitted Helminths Project, elevation values per 
 * [5 minutes](https://biogeo.ucdavis.edu/data/worldclim/v2.1/base/wc2.1_5m_elev.zip)
 * [10 minutes](https://biogeo.ucdavis.edu/data/worldclim/v2.1/base/wc2.1_10m_elev.zip)
 
-The Shuttle Radar Topography Mission (SRTM) _earth explorer_ is undergoing redevelopment, re-visit and unload
-the [Shuttle Radar Topography Mission (SRTM) 1 Arc-Second Global data/map](https://earthexplorer.usgs.gov).
-
+The Shuttle Radar Topography Mission (SRTM) maps are explorable via  [earth explorer](https://earthexplorer.usgs.gov); 
+try [Shuttle Radar Topography Mission (SRTM) 1 Arc-Second Global data/map](https://earthexplorer.usgs.gov).
 
 <br>
 <br>
 
-### References
+### Population Density
 
-* [IHME WASH](https://www.healthdata.org/research-article/mapping-geographic-inequalities-access-drinking-water-and-sanitation-facilities-low)
+* Repository: https://geodata.ucdavis.edu/geodata/pop
 
-Elevation
-* [Open Topology & SRTM](https://www.opentopodata.org/datasets/srtm/)
-* [SRTM](https://lpdaac.usgs.gov/products/srtmgl1v003/),
-* [USGS Elevation](https://www.usgs.gov/centers/eros/science/usgs-eros-archive-digital-elevation-shuttle-radar-topography-mission-srtm-1?qt-science_center_objects=0#qt-science_center_objects)
+The population data is courtesy of [Socioeconomic Data & Applications](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/documentation).  Its map collection 
+resides at [population density data details](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/whatsnew).  These maps are accessible via the ``r`` library
+[`geodata`](https://github.com/rspatial/geodata#data).
 
-
-* [Global Administrative Areas (GADM)](https://gadm.org)
-  * The co&ouml;rdinate reference system details of a GADM map are visible at the bottom 
-    of [a country page](https://gadm.org/download_country.html), after selecting a country.  It is ``EPSG:4326``.
-  * [Global Colaboration Engine](http://globe.umbc.edu)
-  * [GADM & GLOBE](http://globe.umbc.edu/documentation-overview/global-administrative-areas-gadm/)
-  * [Variable Explorer](http://globe.umbc.edu/app/#/analysis/global-variables)  
-  
-* [Features available via ``r geodata``](https://github.com/rspatial/geodata#data)
-  * [population density data](https://geodata.ucdavis.edu/geodata/pop/)
-  * [population density data details](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/whatsnew)
-  * [Socioeconomic Data & Applications](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/documentation)
-
-* [iSDA Soil](https://www.isda-africa.com/isdasoil/)
-  * [iSDA Soil Launch](https://envirometrix.nl/isdasoil-open-soil-data-for-africa/)
-  
-* [DIVA GIS Spatial Data](https://www.diva-gis.org/Data)
-  
-* [National Oceanic & Atmospheric Administration (NOAA)](https://www.ncdc.noaa.gov/cdo-web/datasets)
-
-* [WorldClim](https://www.worldclim.org/data/index.html)
-  
-* [Map projections](https://www.usgs.gov/publications/map-projections)
+Additionally, UC Davis stores copies of these map: [population density data](https://geodata.ucdavis.edu/geodata/pop/)
 
 <br>
 <br>
