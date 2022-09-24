@@ -126,7 +126,7 @@ via <a href="https://helminthiases.github.io/exploration" target="_blank">Tablea
             <li><a href=".R/features/elevation/interface.R">R/features/elevation/interface.R</a></li>
         </ul><br></td>
         <td>Each of these programs enhance the data sets of the outcomes directory <a href="./warehouse/features/data">warehouse/features/data</a>.  They 
-        add WaSH, population, and elevation features to each data set/file via each file's longitude & latitude values.<br></td>
+        add WaSH, population, and elevation features to each data set/file via each file's longitude & latitude values.<br><br></td>
     </tr>
 </table>
 
