@@ -117,7 +117,7 @@ via <a href="https://helminthiases.github.io/exploration" target="_blank">Tablea
     </tr>
     <tr>
         <td><ul><li><a href=".R/features/experiments/interface.R">R/features/experiments/interface.R</a></li></ul><br><br></td>
-        <td>Delivers a copy of each experiment data set/file to the outcomes directory; <a href="./warehouse/features/data">warehouse/features/data</a>.<br></td>
+        <td>Delivers a copy of each experiment data set/file to the outcomes directory; <a href="./warehouse/features/data">warehouse/features/data</a>.</td>
     </tr>
     <tr>
         <td><ul>
