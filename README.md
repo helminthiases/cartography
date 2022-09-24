@@ -53,7 +53,7 @@ The WaSH (water, sanitation, and hygiene) data maps are courtesy of the Institut
 
 The list below summarises a set of [World Climate](https://worldclim.org/data/worldclim21.html) elevations maps.  The maps are
 derivations/versions of the  [Shuttle Radar Topography Mission's](https://lpdaac.usgs.gov/products/srtmgl1v003/) elevation
-maps.  In terms of the Soil Transmitted Helminths Project, elevation values per location are extracts from the **30 seconds map**.
+maps.  In terms of the Soil Transmitted Helminths Project, the elevation values per location are extracts of the **30 seconds map**.
 
 * [30 seconds](https://biogeo.ucdavis.edu/data/worldclim/v2.1/base/wc2.1_30s_elev.zip)
 * [2.5 minutes](https://biogeo.ucdavis.edu/data/worldclim/v2.1/base/wc2.1_2.5m_elev.zip)
