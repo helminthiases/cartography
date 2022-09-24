@@ -31,7 +31,7 @@ and much more.  Due to the presence of the latitude & longitude values, we can e
 geospatial variable objects.  Hence, the focus herein is the derivation of features estimates of interest, per location 
 within a STH ESPEN data set.  Initially, the features of interest are 
 
-* WASH (water, sanitation, and hygiene) features.
+* WaSH (water, sanitation, and hygiene) features.
 * Population density.
 * Elevation.
 
@@ -42,8 +42,9 @@ Future options include _land surface temperature_ and _enhanced vegetation index
 
 ### WaSH
 
-The WaSH data is courtesy of [IHME WaSH](https://www.healthdata.org/research-article/mapping-geographic-inequalities-access-drinking-water-and-sanitation-facilities-low)
-
+The WaSH (water, sanitation, and hygiene) data maps are courtesy of the Institute for Health Metrics and Evaluation (IHME).  Its 
+[WaSH features maps collection](https://cloud.ihme.washington.edu/s/bkH2X2tFQMejMxy) are for the years [2000 &nbsp; 2017]; 
+[details](https://www.healthdata.org/research-article/mapping-geographic-inequalities-access-drinking-water-and-sanitation-facilities-low).
 
 <br>
 <br>
