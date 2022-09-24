@@ -27,9 +27,9 @@ latitude | The latitude geographic co&ouml;rdinate value.
 
 <br>
 
-and much more. &nbsp; &nbsp; Due to the presence of the latitude & longitude values, we can extract feature value estimates from 
-geospatial variable objects. &nbsp; &nbsp; Hence, the focus herein is the derivation of features estimates of interest, per location 
-within a STH ESPEN data set. &nbsp; &nbsp; Initially, the features of interest are 
+and much more. &nbsp; Due to the presence of the latitude & longitude values, we can extract feature value estimates from 
+geospatial variable objects. &nbsp; Hence, the focus herein is the derivation of features estimates of interest, per location 
+within a STH ESPEN data set. &nbsp; Initially, the features of interest are 
 
 * WaSH (water, sanitation, and hygiene) features.
 * Population density.
