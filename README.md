@@ -117,14 +117,14 @@ via <a href="https://helminthiases.github.io/exploration" target="_blank">Tablea
     </tr>
     <tr>
         <td><ul><li><a href=".R/features/experiments/interface.R">R/features/experiments/interface.R</a></li></ul><br><br></td>
-        <td>Delivers a copy of each experiment data set/file to the outcomes directory; <a href="./warehouse/features/data">warehouse/features/data</a>.<br><br></td>
+        <td>Delivers a copy of each experiment data set/file to the outcomes directory; <a href="./warehouse/features/data">warehouse/features/data</a>.<br></td>
     </tr>
     <tr>
         <td><ul>
             <li><a href=".R/features/WASH/interface.R">R/features/WASH/interface.R</a></li>
             <li><a href=".R/features/population/interface.R">R/features/population/interface.R</a></li>
             <li><a href=".R/features/elevation/interface.R">R/features/elevation/interface.R</a></li>
-        </ul><br><br></td>
+        </ul><br></td>
         <td>Each of these programs enhance the data sets of the outcomes directory <a href="./warehouse/features/data">warehouse/features/data</a>.  They 
         add WaSH, population, and elevation features to each data set/file via each file's longitude & latitude values.<br></td>
     </tr>
