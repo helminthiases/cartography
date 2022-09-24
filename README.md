@@ -12,7 +12,7 @@
 
 <br>
 
-Remember, each observation of an ESPEN STH experiments data set - the data set of a country across years - includes the variables
+Each observation of an ESPEN () STH experiments data set - the data set of a country across years - includes the variables
 
 <br>
 
@@ -42,7 +42,7 @@ Future options include _land surface temperature_ and _enhanced vegetation index
 
 ### WaSH
 
-The WaSH (water, sanitation, and hygiene) data maps are courtesy of the Institute for Health Metrics and Evaluation (IHME). &nbsp; &nbsp;  Its 
+The WaSH (water, sanitation, and hygiene) data maps are courtesy of the Institute for Health Metrics and Evaluation (IHME). &nbsp;  Its 
 [WaSH features maps collection](https://cloud.ihme.washington.edu/s/bkH2X2tFQMejMxy) are for the years [2000 &nbsp; 2017]; 
 [details](https://www.healthdata.org/research-article/mapping-geographic-inequalities-access-drinking-water-and-sanitation-facilities-low).
 
@@ -51,9 +51,9 @@ The WaSH (water, sanitation, and hygiene) data maps are courtesy of the Institut
 
 ### Elevation
 
-The list below summarises a set of [World Climate](https://worldclim.org/data/worldclim21.html) elevations maps. &nbsp; &nbsp; The maps are
+The list below summarises a set of [World Climate](https://worldclim.org/data/worldclim21.html) elevations maps. &nbsp; The maps are
 derivations/versions of the  [Shuttle Radar Topography Mission's](https://lpdaac.usgs.gov/products/srtmgl1v003/) elevation
-maps. &nbsp; &nbsp; In terms of the Soil Transmitted Helminths Project, the elevation values per location are extracts of the **30 seconds map**.
+maps. &nbsp; In terms of the Soil Transmitted Helminths Project, the elevation values per location are extracts of the **30 seconds map**.
 
 * [30 seconds](https://biogeo.ucdavis.edu/data/worldclim/v2.1/base/wc2.1_30s_elev.zip)
 * [2.5 minutes](https://biogeo.ucdavis.edu/data/worldclim/v2.1/base/wc2.1_2.5m_elev.zip)
@@ -68,11 +68,9 @@ try [Shuttle Radar Topography Mission (SRTM) 1 Arc-Second Global data/map](https
 
 ### Population Density
 
-* Repository: https://geodata.ucdavis.edu/geodata/pop
-
-The population data is courtesy of the [Socioeconomic Data & Applications](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/documentation) centre.  Its map collection 
-resides at [population density data details](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/whatsnew). &nbsp; &nbsp; These maps are accessible via the ``r`` library
-[`geodata`](https://github.com/rspatial/geodata#data). &nbsp; &nbsp; Additionally, the University of California, Davis, stores copies of these 
+The population data is courtesy of the [Socioeconomic Data & Applications](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/documentation) centre.  For its 
+population maps collection details visit [Gridded Population of the World (GPW), v4](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/whatsnew). &nbsp; The 
+maps are accessible via the ``r`` library [`geodata`](https://github.com/rspatial/geodata#data). &nbsp; Additionally, the University of California, Davis, stores copies of these 
 map: [population density data](https://geodata.ucdavis.edu/geodata/pop/).
 
 <br>
