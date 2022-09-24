@@ -109,7 +109,7 @@ via <a href="https://helminthiases.github.io/exploration" target="_blank">Tablea
             <li><a href=".R/src/WASH/interface.R">R/src/WASH/interface.R</a></li>
             <li><a href=".R/src/population/interface.R">R/src/population/interface.R</a></li>
             <li><a href=".R/src/elevation/interface.R">R/src/elevation/interface.R</a></li>
-        </ul></td>
+        </ul><br></td>
         <td>These programs unload the experiments, WaSH, populations, and elevation data/maps via URL strings.  <br><br>The experiments data depends 
             on this project's <a href="https://github.com/helminthiases/infections" target="_blank">infections repository</a>. &nbsp; Specifically, a set of its 
             <a href="https://raw.githubusercontent.com/helminthiases/infections/master/warehouse/data/ESPEN/experiments/data.csv">outcomes</a>; a 
