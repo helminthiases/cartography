@@ -70,11 +70,10 @@ try [Shuttle Radar Topography Mission (SRTM) 1 Arc-Second Global data/map](https
 
 * Repository: https://geodata.ucdavis.edu/geodata/pop
 
-The population data is courtesy of [Socioeconomic Data & Applications](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/documentation).  Its map collection 
+The population data is courtesy of the [Socioeconomic Data & Applications](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/documentation) centre.  Its map collection 
 resides at [population density data details](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/whatsnew).  These maps are accessible via the ``r`` library
-[`geodata`](https://github.com/rspatial/geodata#data).
-
-Additionally, UC Davis stores copies of these map: [population density data](https://geodata.ucdavis.edu/geodata/pop/)
+[`geodata`](https://github.com/rspatial/geodata#data).  Additionally, the University of California, Davis, stores copies of these 
+map: [population density data](https://geodata.ucdavis.edu/geodata/pop/).
 
 <br>
 <br>
