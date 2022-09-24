@@ -68,7 +68,7 @@ try [Shuttle Radar Topography Mission (SRTM) 1 Arc-Second Global data/map](https
 
 ### Population Density
 
-The population data is courtesy of the [Socioeconomic Data & Applications](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/documentation) centre.  For its 
+The population data is courtesy of the [Socioeconomic Data & Applications](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/documentation) centre. &nbsp; For its 
 population maps collection details visit [Gridded Population of the World (GPW), v4](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4/whatsnew). &nbsp; The 
 maps are accessible via the ``r`` library [`geodata`](https://github.com/rspatial/geodata#data). &nbsp; Additionally, the University of California, Davis, stores copies of these 
 map: [population density data](https://geodata.ucdavis.edu/geodata/pop/).
