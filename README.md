@@ -43,7 +43,6 @@ within a STH ESPEN data set. &nbsp; Initially, the features of interest are
 Future options include _land surface temperature_ and _enhanced vegetation index_.
 
 <br>
-<br>
 
 ### WaSH
 
@@ -51,7 +50,6 @@ The WaSH (water, sanitation, and hygiene) data maps are courtesy of the Institut
 [WaSH features maps collection](https://cloud.ihme.washington.edu/s/bkH2X2tFQMejMxy) are for the years [2000 &nbsp; 2017]; 
 [details](https://www.healthdata.org/research-article/mapping-geographic-inequalities-access-drinking-water-and-sanitation-facilities-low).
 
-<br>
 <br>
 
 ### Elevation
@@ -68,7 +66,6 @@ maps. &nbsp; In terms of the Soil Transmitted Helminths Project, the elevation v
 The Shuttle Radar Topography Mission (SRTM) maps are explorable via  [earth explorer](https://earthexplorer.usgs.gov); 
 try [Shuttle Radar Topography Mission (SRTM) 1 Arc-Second Global data/map](https://earthexplorer.usgs.gov).
 
-<br>
 <br>
 
 ### Population Density
