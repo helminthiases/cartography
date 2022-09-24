@@ -113,11 +113,11 @@ via <a href="https://helminthiases.github.io/exploration" target="_blank">Tablea
         <td>These programs unload the experiments, WaSH, populations, and elevation data/maps via URL strings.  <br><br>The experiments data depends 
             on this project's <a href="https://github.com/helminthiases/infections" target="_blank">infections repository</a>. &nbsp; Specifically, a set of its 
             <a href="https://raw.githubusercontent.com/helminthiases/infections/master/warehouse/data/ESPEN/experiments/data.csv">outcomes</a>; a 
-            data set/file per country.</td>
+            data set/file per country. <br><br></td>
     </tr>
     <tr>
         <td><ul><li><a href=".R/features/experiments/interface.R">R/features/experiments/interface.R</a></li></ul></td>
-        <td>Delivers a copy of each experiment data set/file to the outcomes directory; <a href="./warehouse/features/data">warehouse/features/data</a>.</td>
+        <td>Delivers a copy of each experiment data set/file to the outcomes directory; <a href="./warehouse/features/data">warehouse/features/data</a>.<br><br></td>
     </tr>
     <tr>
         <td><ul>
@@ -126,7 +126,7 @@ via <a href="https://helminthiases.github.io/exploration" target="_blank">Tablea
             <li><a href=".R/features/elevation/interface.R">R/features/elevation/interface.R</a></li>
         </ul></td>
         <td>Each of these programs enhance the data sets of the outcomes directory <a href="./warehouse/features/data">warehouse/features/data</a>.  They 
-        add WaSH, population, and elevation features to each data set/file via each file's longitude & latitude values.</td>
+        add WaSH, population, and elevation features to each data set/file via each file's longitude & latitude values.<br><br></td>
     </tr>
 </table>
 
