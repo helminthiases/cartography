@@ -116,7 +116,7 @@ via <a href="https://helminthiases.github.io/exploration" target="_blank">Tablea
             data set/file per country. <br><br></td>
     </tr>
     <tr>
-        <td><ul><li><a href=".R/features/experiments/interface.R">R/features/experiments/interface.R</a></li></ul></td>
+        <td><ul><li><a href=".R/features/experiments/interface.R">R/features/experiments/interface.R</a></li></ul><br><br></td>
         <td>Delivers a copy of each experiment data set/file to the outcomes directory; <a href="./warehouse/features/data">warehouse/features/data</a>.<br><br></td>
     </tr>
     <tr>
@@ -126,7 +126,7 @@ via <a href="https://helminthiases.github.io/exploration" target="_blank">Tablea
             <li><a href=".R/features/elevation/interface.R">R/features/elevation/interface.R</a></li>
         </ul><br><br></td>
         <td>Each of these programs enhance the data sets of the outcomes directory <a href="./warehouse/features/data">warehouse/features/data</a>.  They 
-        add WaSH, population, and elevation features to each data set/file via each file's longitude & latitude values.<br><br></td>
+        add WaSH, population, and elevation features to each data set/file via each file's longitude & latitude values.<br></td>
     </tr>
 </table>
 
