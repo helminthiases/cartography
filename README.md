@@ -21,14 +21,14 @@ set - the data set of a country across years - includes the variables
 
 <br>
 
-variable | description
-:--- | :---
-iso2 | The ISO 3166-1 alpha-2 country code, i.e., the two-letter country code.
-iso3 | The ISO 3166-1 alpha-3 country code, i.e., the three-letter country code.
-admin1_id | A country's administrative division 1 code.
-admin2_id | A country's administrative division 2 code.
-longitude | The longitude geographic co&ouml;rdinate value.
-latitude | The latitude geographic co&ouml;rdinate value.
+| variable  | description                                                               |
+|:----------|:--------------------------------------------------------------------------|
+| iso2      | The ISO 3166-1 alpha-2 country code, i.e., the two-letter country code.   |
+| iso3      | The ISO 3166-1 alpha-3 country code, i.e., the three-letter country code. |
+| admin1_id | A country's administrative division 1 code.                               |
+| admin2_id | A country's administrative division 2 code.                               |
+| longitude | The longitude geographic co&ouml;rdinate value.                           |
+| latitude  | The latitude geographic co&ouml;rdinate value.                            |
 
 <br>
 
@@ -81,7 +81,7 @@ map: [population density data](https://geodata.ucdavis.edu/geodata/pop/).
 ## The Programs
 
 The table below outlines the programs of this repository.  The programs extend/enhance a set of the experiments' data of
-the [infections repository](https://github.com/helminthiases/infections).  The statement/command
+the [infections' repository](https://github.com/helminthiases/infections).  The statement/command
 
 ````r
   source(file = 'R/main.R')
@@ -102,10 +102,10 @@ via <a href="https://helminthiases.github.io/exploration" target="_blank">Tablea
     </thead>
     <tr>
         <td><ul>
-            <li><a href=".R/src/experiments/interface.R">R/src/experiments/interface.R</a></li>
-            <li><a href=".R/src/WASH/interface.R">R/src/WASH/interface.R</a></li>
-            <li><a href=".R/src/population/interface.R">R/src/population/interface.R</a></li>
-            <li><a href=".R/src/elevation/interface.R">R/src/elevation/interface.R</a></li>
+            <li><a href="R/src/experiments/interface.R">R/src/experiments/interface.R</a></li>
+            <li><a href="R/src/WASH/interface.R">R/src/WASH/interface.R</a></li>
+            <li><a href="R/src/population/interface.R">R/src/population/interface.R</a></li>
+            <li><a href="R/src/elevation/interface.R">R/src/elevation/interface.R</a></li>
         </ul><br></td>
         <td>These programs unload the experiments, WaSH, populations, and elevation data/maps via URL strings.  <br><br>The experiments data depends 
             on this project's <a href="https://github.com/helminthiases/infections" target="_blank">infections repository</a>. &nbsp; Specifically, a set of its 
@@ -113,14 +113,14 @@ via <a href="https://helminthiases.github.io/exploration" target="_blank">Tablea
             data set/file per country. <br><br></td>
     </tr>
     <tr>
-        <td><ul><li><a href=".R/features/experiments/interface.R">R/features/experiments/interface.R</a></li></ul><br></td>
+        <td><ul><li><a href="R/features/experiments/interface.R">R/features/experiments/interface.R</a></li></ul><br></td>
         <td>Delivers a copy of each experiment data set/file to the outcomes directory; <a href="./warehouse/features/data">warehouse/features/data</a>.<br><br></td>
     </tr>
     <tr>
         <td><ul>
-            <li><a href=".R/features/WASH/interface.R">R/features/WASH/interface.R</a></li>
-            <li><a href=".R/features/population/interface.R">R/features/population/interface.R</a></li>
-            <li><a href=".R/features/elevation/interface.R">R/features/elevation/interface.R</a></li>
+            <li><a href="R/features/WASH/interface.R">R/features/WASH/interface.R</a></li>
+            <li><a href="R/features/population/interface.R">R/features/population/interface.R</a></li>
+            <li><a href="R/features/elevation/interface.R">R/features/elevation/interface.R</a></li>
         </ul><br></td>
         <td>Each of these programs enhance the data sets of the outcomes directory <a href="./warehouse/features/data">warehouse/features/data</a>.  They 
         add WaSH, population, and elevation features to each data set/file via each file's longitude & latitude values.<br><br></td>
